@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cert1: MyString
+  cert2: MyString
+  cert3: MyString
+  cert4: MyString
+
+two:
+  name: MyString
+  cert1: MyString
+  cert2: MyString
+  cert3: MyString
+  cert4: MyString

@@ -1,0 +1,81 @@
+<div class="container">
+<div class="row cover-row">
+  <div class="col-md-2 userpic">
+    <img class="img-responsive patient-img" src="assets/images/mypic.jpg">
+  </div>
+  <br/><br/><br/><br/><br/><br/><br/>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+        24
+    </div>
+      <div class="user-headings">
+        Appointments
+      </div>
+  </div>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+      9
+    </div>
+
+    <div class="user-headings">
+      Starred
+    </div>
+
+  </div>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+      5
+    </div>
+
+    <div class="user-headings">
+      Reviews
+    </div>
+
+  </div>
+  </div>
+</div>
+  <br/><br/><br/>
+<!--FIX THIS SHIT-->
+<div class="container">
+              <div class="row">
+                <div class="col-md-2 menu">
+                  <div class="menu-item">
+                    <a class="item">Reviews</a>
+                  </div>
+                  <div class="row">
+                    <div class="menu-item">
+
+                      <a class="item">Appointments</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="menu-item">
+                      <a class="item">Starred Doc</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="menu-item">
+                      <a class="item">Logout</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                  <center>
+                    <div class="row heading-row1">Professional Information</div><hr style="width:30%">
+                  </center>
+                  <div class="row professional-row">
+                    <div class="row"><div class="col-md-4" id="pro-label">Speciality:</div><div class="col-md-8 pro-info"><%=@office.spec%></div></div>
+                    <hr style="width:30%">
+                    <div class="row"><div class="col-md-4" id="pro-label">Fee:</div><div class="col-md-8 pro-info"><%=@office.fee%></div></div>
+                    <hr style="width:30%">
+                    <div class="row"><div class="col-md-4" id="pro-label">Office Start Time:</div><div class="col-md-8 pro-info"><%=@office.offstart%></div></div>
+                    <hr style="width:30%">
+                    <div class="row"><div class="col-md-4" id="pro-label">Office End Time:</div><div class="col-md-8 pro-info"><%=@office.offend%></div></div>
+                    <hr style="width:30%">
+                    <div class="row"><div class="col-md-4" id="pro-label">Address:</div><div class="col-md-8 pro-info"><%=@office.address%></div></div>
+                    <hr style="width:30%">
+
+                   </div>
+                </div>
+              </div>
+            </div>

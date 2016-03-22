@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-2"></div>
+  <div class="col-md-2"></div>
+  <div class="col-md-2"></div>
+</div>
+
+<div class="container">
+  <div class="row pat-profile">
+    <div class="row prof-heading"><h2 >Qualification and  Experience</h2>
+    </div>
+    <div class="row"><div class="col-md-2" id="prof-sub-heading">Education</div>
+
+      <div class="col-md-10">
+        <% if @doctor.degree.blank? %>
+          <p>Not mentioned his degrees yet</p>
+        <%else%>
+          <%=@doctor.degree.degreeName%>
+        <%end%>
+      </div><hr>
+    </div>
+    <div class="row"><div class="col-md-2" id="prof-sub-heading">Fee</div>
+
+      <div class="col-md-10"><%=@doctor.profession.fee%></div>  <hr>
+    </div>
+    <div class="row"><div class="col-md-2" id="prof-sub-heading">Expertise</div>
+
+      <div class="col-md-10"><%=@doctor.profession.spec%></div>  <hr>
+    </div>
+    <div class="row">
+      </div>
+</div>

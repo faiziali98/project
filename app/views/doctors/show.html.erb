@@ -1,0 +1,81 @@
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= csrf_meta_tags %>
+
+
+<div class="container">
+<div class="row cover-row">
+  <div class="col-md-2 userpic">
+    <img class="img-responsive patient-img" src="assets/images/mypic.jpg">
+  </div>
+  <br/><br/><br/><br/><br/><br/><br/>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+        24 <%= @doctor.id %>
+    </div>
+      <div class="user-headings">
+        Appointments
+      </div>
+  </div>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+      9
+    </div>
+
+    <div class="user-headings">
+      Starred
+    </div>
+
+  </div>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+      5
+    </div>
+
+    <div class="user-headings">
+      Reviews
+    </div>
+
+  </div>
+  </div>
+  <br/><br/><br/>
+  <div class="doc-dashboard">
+  <div class="row doc-drow">
+    <div class="col-md-6 col-xs-12">
+      <center>
+        <div class="glyphicon glyphicon-education fa-5x">
+        </div>
+        <%= hidden_field_tag :doctor_id, @doctor.id %>
+        <div class="doc-text"id="label1"><%= link_to "Edit your Qualifications",:controller => :degrees ,:action => :new ,:id => @doctor.id %></div>
+        <div class="doc-text"id="label1"><%= link_to "See your Qualification",:controller => :degrees ,:action => :show ,:id => @doctor.id %></div>
+      <center>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <center>
+        <div class="glyphicon glyphicon-briefcase fa-5x">
+        </div>
+        <div class="doc-text"id="label1"><%= link_to "Edit your Professional Info",:controller => :professions ,:action => :new ,:id => @doctor.id %></div>
+        <div class="doc-text"id="label1"><%= link_to "See Professional Info",:controller => :professions ,:action => :show ,:id => @doctor.id %></div>
+      <center>
+    </div>
+  </div>
+  <div class="row doc-drow">
+    <div class="col-md-6 col-xs-12">
+      <center>
+        <div class="glyphicon glyphicon-education fa-4x">
+        </div>
+        <div class="doc-text" id="label1"><%= link_to "Edit Personal Info",:controller => :doctors ,:action => :edit ,:id => @doctor.id%></div>
+        <div class="doc-text" id="label1"><%= link_to "See Personal Info",:controller => :doctors ,:action => :show1 ,:id => @doctor.id%></div>
+      <center>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <center>
+        <div class="glyphicon glyphicon-briefcase fa-5x">
+        </div>
+        <div class="doc-text"id="label1">See your appointments</div>
+      <center>
+    </div>
+  </div>
+</div>
+
+<div>

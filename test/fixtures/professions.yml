@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spec: MyString
+  fee: MyString
+  offstart: 
+  offend: 
+  doctor_id: 1
+
+two:
+  spec: MyString
+  fee: MyString
+  offstart: 
+  offend: 
+  doctor_id: 1

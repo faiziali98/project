@@ -1,0 +1,84 @@
+<div class="container">
+<div class="row cover-row">
+  <div class="col-md-2 userpic">
+    <img class="img-responsive patient-img" src="assets/images/mypic.jpg">
+  </div>
+  <br/><br/><br/><br/><br/><br/><br/>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+        24
+    </div>
+      <div class="user-headings">
+        Appointments
+      </div>
+  </div>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+      9
+    </div>
+
+    <div class="user-headings">
+      Starred
+    </div>
+
+  </div>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+      5
+    </div>
+
+    <div class="user-headings">
+      Reviews
+    </div>
+
+  </div>
+  </div>
+  <br/><br/><br/>
+<!--FIX THIS SHIT-->
+
+              <div class="row">
+                <div class="col-md-2 menu">
+                  <div class="menu-item">
+                    <a class="item">Reviews</a>
+                  </div>
+                  <div class="row">
+                    <div class="menu-item">
+
+                      <a class="item">Appointments</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="menu-item">
+                      <a class="item">Starred Doc</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="menu-item">
+                      <a class="item">Logout</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row heading-row">
+                  <center><h1>Academics</h1><hr style="width:30%;"> </center>
+                </div>
+                <div class="col-md-10 edit-form">
+                  <center>
+                  <div class="form-group">
+                  <%= form_for (@degree),:url =>{:controller =>:degrees ,:action => :create, :id => @doctor.id} do |f| %>
+                    <%= f.label :uniName, id:"label1"%>
+                      <%= f.text_field :uniName,class: 'form-control' %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :degreeName,id:"label1" %>
+                          <%= f.text_field :degreeName,class: 'form-control'  %>
+                      </div>
+
+                        <div class="form-group">
+                            <%= f.submit "Add Degree", class: "btn btn-edit" %>
+                        </div>
+                      <%end %>
+                      <center>
+                    </div><!-- /.contact-form -->
+
+                    </div>
+                </div>

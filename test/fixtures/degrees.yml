@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uniName: MyString
+  degreeName: MyString
+  doctor_id: 1
+
+two:
+  uniName: MyString
+  degreeName: MyString
+  doctor_id: 1

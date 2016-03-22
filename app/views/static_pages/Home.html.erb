@@ -1,0 +1,55 @@
+  <title>SoftwareProject</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <header id="intro-carousel" class="carousel slide">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+          <div class="item html5-video-container active">
+              <!-- HTML5 Video -->
+            
+              <video muted autoplay loop poster="/images/typing-on-mac.jpg" id="html5-video" class="fill">
+                  <source src="/videos/typing-on-mac.webm" type="video/webm">
+                      <source src="/videos/typing-on-mac.mp4" type="video/mp4">
+              </video>
+              <div class="carousel-caption">
+                <div class="row">
+                  <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                    <p class="intro-text animated slideInUp"></p>
+                  </div>
+                  <div class="col-md-5"></div>
+                  <div class="col-md-4 pull-right">                            <!--div for the form -->
+                    <form role="form" class="formdoc" style="height:300px; width:400px;">
+                      <div class="form-group">
+
+                        <select class="form-control" id="sel1">
+                          <option>Search For</option
+                          <option>Physician</option>
+                          <option>Gynacologist</option>
+                          <option>Dentist</option>
+
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+
+                        <select class="form-control" id="sel1">
+                          <option>Select Area</option>
+                          <option>Model Town</option>
+                          <option>Johar Town</option>
+                          <option>DHA</option>
+                        <select>
+                      </div>
+
+                      <button type="submit" class="btn btn-default" style="margin-top:2em;background-color:#fff;color:rgba(254,82,76, 1);font-weight:bold">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="overlay-detail"></div>
+          </div><!-- /.item -->
+
+      </div><!-- /.carousel-inner -->
+      <div class="mouse"></div>
+  </header>

@@ -1,0 +1,62 @@
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= csrf_meta_tags %>
+
+<div class="row heading-row">
+  <center><h1>Please SignUp</h1><hr style="width:30%;"> </center>
+</div>
+<div class="left-side">
+  <!--Half of the page -->
+
+</div>
+<div class="right-side" >
+  <div class="container signin-form">
+            <div class="row form-container">
+
+                <div class="col-md-8 contact-form">
+                  <div class="form-group">
+                  <%= form_for(@patient) do |f| %>
+                    <%= f.label :name, id:"label"%>
+                      <%= f.text_field :name,class: 'form-control' %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :email,id:"label" %>
+                          <%= f.email_field :email,class: 'form-control'  %>
+                      </div>
+                      <div class="form-group">
+                          <%= f.label :sex,id:"label" %>
+                            <%= f.text_field :sex,class: 'form-control'  %>
+                        </div>
+                        <div class="form-group">
+                            <%= f.label :phone,id:"label" %>
+                              <%= f.text_field :phone,class: 'form-control'  %>
+                          </div>
+                      <div class="form-group">
+                            <%= f.label :password,id:"label" %>
+                            <%= f.password_field :password,class: 'form-control' %>
+                        </div>
+                        <div class="form-group">
+                            <%= f.label :password_confirmation, "Confirmation",id:"label" %>
+                            <%= f.password_field  :password_confirmation,class: 'form-control' %>
+                        </div>
+                        <div class="row checkboxesrow">
+                          <div class="col-md-4">
+
+                          </div>
+                          <div class="col-md-4 ">
+
+                          </div>
+
+                        </div>
+                        <div class="form-group">
+                            <%= f.submit "Sign Up", class: "btn btn-signin" %>
+                        </div>
+                      <%end %>
+
+
+
+                </div><!-- /.contact-form -->
+
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+</div>

@@ -1,0 +1,65 @@
+<div class="container">
+<div class="row cover-row">
+  <div class="col-md-2 userpic">
+    <img class="img-responsive patient-img" src="assets/images/mypic.jpg">
+  </div>
+  <br/><br/><br/><br/><br/><br/><br/>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+        24
+    </div>
+      <div class="user-headings">
+        Appointments
+      </div>
+  </div>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+      9
+    </div>
+
+    <div class="user-headings">
+      Starred
+    </div>
+
+  </div>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+      5
+    </div>
+
+    <div class="user-headings">
+      Reviews
+    </div>
+
+  </div>
+  </div>
+  <br/><br/><br/>
+<!--FIX THIS SHIT-->
+
+              <div class="row">
+                <center>
+                <div class="col-md-12">
+                  <div class="doc-dashboard">
+                  <center>
+                  <div class="row">
+                    <div class="col-md-6 patient-cols">
+                      <button class="btn btn-lg btn-edit">Search Doctors</button>
+                        <%=link_to "Search Doctor", :controller => "searches", :action => "new", :patid => @patient.id , :method => :post %>
+                    </div>
+                    <div class="col-md-6 patient-cols">
+                      <button class="btn btn-lg btn-edit">Make Appointment</button>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 patient-cols">
+                    <button class="btn btn-lg btn-edit">Edit Profile</button>
+                  </div>
+                  <div class="col-md-6 patient-cols">
+                    <button class="btn btn-lg btn-edit">Logout</button>
+                  </div>
+              </div>
+
+                <center>
+              </div>
+            </div>
+            <center>

@@ -1,0 +1,1359 @@
+/*patents seaches and sees doctor profile*/
+.prof-heading{
+  padding-top: 290px;
+}
+
+
+/*search page show */
+.search-results{
+  background: #f2f2f2;
+  padding-left: 10px;
+}
+.search-heading{
+  color: #2c3e50;
+  font-size:21px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.search-details{
+  color: #2c3e50;
+  font-size: 12px;
+  padding-bottom: 3px;
+  padding-left: 15px;
+  font-family:sans-serif;
+}
+.search-details1{
+  color: #2c3e50;
+  font-size: 12px;
+  padding-bottom: 3px;
+  padding-left: 31px;
+  font-family:sans-serif;
+}
+.btn-profile{
+  width:50px;
+  height:23px;
+  font-size:13px;
+
+}
+.doc-profile-pic{
+  border-radius: 50%;
+  width: 100px;
+  height:100px;
+
+}
+/*ENDED*/
+
+
+/*doctor EDIT AND SHOW*/
+
+.doc-dashboard{
+  background: #eeeeee;
+}
+.doc-drow{
+  padding-bottom: 40px;
+  font-family: helvetica;
+  font-weight: bold;
+}
+.btn-edit{
+  color:#fff;
+  background:rgba(254,82,76, .9);
+}
+.btn-edit:hover{
+  background:#fff;
+  color:rgba(254,82,76, .9);
+
+}
+.edit-form{
+  padding-left: 30px;
+  background:#eeeeee;
+}
+#label1{
+    color:rgba(254,82,76, .9);
+}
+/*ENDED*/
+
+/*STYLING THE PROFESSIONAL sHow*/
+.heading-row1{
+  padding-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color:rgba(254,82,76, .9);
+
+}
+#pro-label{
+  color: rgba(254,82,76, .9);
+  font-size:16px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+#pro-info{
+  font-size: 16px;
+  color:#2c3e50;
+}
+.professional-row{
+  padding-left: 22em;
+}
+/*ended*/
+/*PATIENT STYLING*/
+.patient-cols{
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.btn-lg{
+  width:290px;
+}
+/*end*/
+
+/* DEGREE STYLING  */
+.degree-box{
+  border: 3px solid ##2c3e50;
+}
+/*ENDED*/
+.cover-row{
+  height:300px;
+  width:100%;
+  background-color:#2c3e50;
+  background-image: ;
+  padding-bottom: 110px;
+}
+.user-blocks{
+  background-color: #fff;
+  color:#2c3e50;
+  border-radius: 25px;
+  padding-left:90px;
+  margin-left: 2em;
+  height:100px;
+
+}
+.user-blocks .Number{
+  font-size: 25px;
+  color:#000;
+}
+.menu{
+  background-color:#2c3e50;
+  height: 300px;
+}
+.review-col{
+  background-color:;
+  border-left: 1px solid #fff;
+}
+.doc-name{
+  padding-left:9em;
+}
+.doc-name1{
+  padding-left:9em;
+  padding-bottom: 15px;
+  color:#2c3e50;
+  font-size:16px;
+  font-weight: bold;
+}
+
+.menu-item{
+  padding-left: 20px;
+  padding-bottom:30px;
+  font-size: 20px;
+  color:#fff;
+  font-weight: 400;
+  border-top: 1px solid #fff;
+  border-bottom: : 1px solid #fff;
+}
+.user-blocks .user-headings{
+  font-size: 25px;
+  color:#95A5A6;
+  padding-top:9px;
+}
+.userpic{
+  padding-top: 110px;
+  padding-left: 30px;
+
+}
+.patient-img{
+
+  height: 140px;
+  width: 140px;
+  border-radius:50%;
+}
+
+
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+  -webkit-transform: translate3d(0, -50px, 0);
+  -ms-transform: translate3d(0, -50px, 0);
+  transform: translate3d(0, -50px, 0);
+  -webkit-transition: -webkit-transform .5s ease-out;
+  -ms-transition: -webkit-transform .5s ease-out;
+  transition: transform .5s ease-out;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: red;
+  }
+}
+.left-side{
+  position: absolute;
+    width: 40%;
+    height: 100%;
+    background:#000;
+    left: 10%;
+
+    top:30%;
+}
+.right-side{
+  position: absolute;
+
+    height: 100%;
+    background:rgba(254,82,76, .9);
+    top:30%;
+    left: 50%;
+    right:10%;
+}
+.form-control{
+  width:60%;
+
+}
+.btn-signin{
+  color:rgba(254,82,76, .9);
+  background: #fff;
+  font-weight: bold;
+
+}
+.signin-form{
+  padding-top:50px;
+}
+.heading-row{
+  padding-top:90px;
+}
+.checkboxes{
+  padding-top: 10px;
+  color:#fff;
+  padding-left: 20px;
+}
+.checkboxesrow{
+  padding-left:20px;
+}
+.pace.pace-active {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.pace .pace-progress {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 10px;
+  background: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+  pointer-events: none;
+}
+
+
+
+/* 2:   Default styles
+/* ---------------------------------------------- */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #999; /* Can be changed via colors.css */
+    background-color: #fff;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 20px 0;
+    text-transform: none;
+    color: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+p {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+a {
+    color: #fff;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+}
+
+.light {
+    font-weight: 100;
+}
+
+.white{
+    color:#fff;
+}
+
+.gray{
+    color: #a5a5a5;
+}
+
+.buffer-twenty{
+    margin:20px 0;
+}
+
+.buffer-twenty-top{
+    margin-top: 20px;
+}
+
+.buffer-twenty-bottom{
+    margin-bottom: 20px;
+}
+
+.buffer-forty{
+    margin:40px 0;
+}
+
+.buffer-forty-top{
+    margin-top: 40px;
+}
+
+.no-bottom-pad{
+    padding-bottom: 0 !important;
+}
+
+.no-top-pad{
+    padding-top: 0 !important;
+}
+
+.highlight{
+    font-weight: 700;
+    color: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+}
+
+.list-ord{
+    list-style: none;
+    margin:0;
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.no-bg{
+    background: none !important;
+}
+
+
+/* 3:   Common section styles
+/* ---------------------------------------------- */
+
+.content-section {
+    padding: 100px 0;
+}
+
+.content-section.alt-bg{
+    background-color: #222;
+}
+
+.content-section.alt-bg-light{
+    background-color: #fafafa;
+    border-top:1px solid #f5f5f5;
+    border-bottom:1px solid #d2d2d2;
+}
+
+.caption{
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.align-middle{
+    margin:0 auto;
+}
+
+.sans-border{
+    border-radius: 0;
+}
+
+.sans-shadow{
+    box-shadow: none;
+}
+
+blockquote {
+    display: block;
+    font-size: 22px;
+    position: relative;
+    padding-left: 90px;
+    color: rgba(254,82,76, 1);
+    border-color: rgba(254,82,76, 1);
+}
+
+blockquote:before {
+    content: "\f10d";
+    font-size: 55px;
+    font-family: FontAwesome;
+    position: absolute;
+    top: -4px;
+    left: 20px;
+}
+
+blockquote span:before{
+    content:'--';
+    padding: 0 10px 0 0;
+}
+
+blockquote span{
+    padding: 10px 0;
+    display: block;
+    font-size: 16px;
+    color: #999;
+}
+
+/* 4:   Navigation
+/* ---------------------------------------------- */
+
+.navbar-custom {
+    margin-bottom: 0;
+    text-transform: none;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    -webkit-transition: background .5s ease-in-out;
+   -moz-transition: background .5s ease-in-out;
+        transition: background .5s ease-in-out;
+}
+
+.navbar-custom.top-nav-collapse{
+    background: rgba(254,82,76, .9); /* Primary color, can be changed via colors.css */
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+#sign-In{
+    background: rgba(254,82,76, .9); /* Primary color, can be changed via colors.css */
+}
+#sign-In:hover{
+  color:rgba(254,82,76,0.9);
+  background-color: #fff;
+}
+
+.brand-logo{
+    display: inline-block;
+    padding: 14px 0;
+    margin: 0 16px;
+}
+
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-brand .navbar-toggle {
+    padding: 2px 6px;
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+
+
+.nav-list li a :hover{
+color:rgba(254,82,76, .8);
+background: rgba(254,82,76, .9); /* Primary color, can be changed via colors.css */
+}
+
+
+/* Custom overlay navigation
+/* ---------------------------------------------- */
+.button_container {
+    position: relative;
+    margin-top: 14px;
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+    z-index: 999;
+    -webkit-transition: opacity .25s ease;
+            transition: opacity .25s ease;
+}
+
+/* Animate the top hamburger bar */
+.button_container.active .top {
+    -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+        -ms-transform: translateY(8px) translateX(0) rotate(45deg);
+            transform: translateY(8px) translateX(0) rotate(45deg);
+    background: #FFF;
+}
+
+/* Set the middle hamburger bar's opacity to 0  */
+.button_container.active .middle {
+    opacity: 0;
+    background: #FFF;
+}
+
+/* Animate the bottom hamburger bar */
+.button_container.active .bottom {
+    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+        -ms-transform: translateY(-8px) translateX(0) rotate(-45deg);
+            transform: translateY(-8px) translateX(0) rotate(-45deg);
+    background: #FFF;
+}
+
+.button_container span {
+    background: #fff;
+    border: none;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.button_container span:nth-of-type(2) {
+    top: 8px;
+}
+
+.button_container span:nth-of-type(3) {
+    top: 16px;
+}
+
+/* The overlay */
+.overlay {
+    position: fixed;
+    display: block;
+    background: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+    top: 0;
+    border: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .35s, visibility .35s, height .35s;
+            transition: opacity .35s, visibility .35s, height .35s;
+    overflow: auto;
+}
+
+.overlay.open {
+    opacity: .95;
+    visibility: visible;
+    height: 100%;
+}
+
+.overlay.open li {
+    -webkit-animation: fadeInRight .5s ease forwards;
+            animation: fadeInRight .5s ease forwards;
+    -webkit-animation-delay: .35s;
+        animation-delay: .35s;
+}
+
+.overlay.open li:nth-of-type(1) {
+    -webkit-animation-delay: .40s;
+            animation-delay: .40s;
+}
+
+.overlay.open li:nth-of-type(2n) {
+    -webkit-animation-delay: .50s;
+            animation-delay: .50s;
+}
+
+.overlay nav {
+    position: relative;
+    height: 50%;
+    top: 50%;
+    font-size: 30px;
+    font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
+    text-transform: none;
+    font-weight: 600;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}
+
+.overlay ul li {
+    display: block;
+    height: 15%;
+    height: calc(100% / 8);
+    min-height: 65px;
+    position: relative;
+    opacity: 0;
+}
+
+.overlay ul li a {
+    display: block;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
+    width: 50%;
+}
+
+/* Link underline on hover */
+.overlay ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transition: .15s;
+            transition: .15s;
+}
+
+
+/* 5:   PAGE SECTIONS
+/* ---------------------------------------------- */
+
+/*      5.1: Hero unit (Main slider)
+/* ---------------------------------------------- */
+.formdoc {
+  background:
+    /* top, transparent red, faked with gradient */
+    linear-gradient(
+      rgba(255, 0, 0, 0.25),
+      rgba(255, 0, 0, 0.25)
+    ),
+  }
+#sel1{
+  margin-top:0.5em;
+  color:rgba(254,82,76, 1);
+  font-weight:bold;
+  padding-left:10px;
+  padding-right:10px;
+
+  }
+  #label{
+      color:#fff;
+  }
+.form-control{
+  padding-left:30px;
+  padding-right:30px;
+  padding-top: 10px;
+  }
+.intro-carousel {
+    width: 100%;
+    /*height: 100%;*/
+    color: #fff;
+    background:#222;
+}
+
+.carousel-caption{
+    text-shadow: none;
+    bottom: 25%;
+}
+#Search-doctor{
+  background-color:rgba(254,82,76, 1);
+  color :#fff;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 14px;
+  height: 300px;
+}
+.mynav{
+  background-color:#3598db;
+}
+.teamrow{
+  padding-top:65px;
+}
+#cont-links{
+  color:rgba(254,82,76, 1);
+  padding-left: 10px;
+}
+#Book-appointment{
+  background-color:#f2f2f2;
+  color :rgba(254,82,76, 1);
+  font-weight: bold;
+  font-family: sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 14px;
+  height: 300px;
+}
+#Share-experience{
+  background-color:#2c3e50;
+  color :#fff;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 14px;
+  height: 300px;
+}
+#Icon{
+  padding-top: 20px;
+}
+.content{
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 10px;
+  font-family: helvetica;
+}
+.Serve-heading{
+  font-size: 20px;
+  padding-bottom:6px;
+}
+.carousel-caption h1{
+    padding: 0;
+    margin: 10px 0;
+    color: #fff;
+}
+
+
+.carousel-control{
+    top: 50%;
+    width:4%;
+    height:7%;
+    margin: 0;
+    text-shadow: none;
+}
+
+
+#parallax-slide{
+    background: url(../images/cover-three.jpg) 50% 0 no-repeat;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+         -o-background-size: cover;
+}
+
+.overlay-detail {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000; /* Set to black, can be changed via colors.css */
+    opacity: 0.5;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+
+/* Full Slider HTML Template via www.startbootstrap.com
+/* ---------------------------------------------- */
+
+/*!
+ * Start Bootstrap - Full Slider HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+         -o-background-size: cover;
+}
+
+
+/* Hero unit background video
+/* ---------------------------------------------- */
+
+
+.video-section{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/youtube-video-cover.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+         -o-background-size: cover;
+    background-attachment: fixed;
+}
+
+.video-section .bgndVideo{
+    width: 100%;
+    height: 100%;
+}
+
+
+.video-section .buttonBar{display:none;}
+.player {font-size: 1px;}
+
+
+
+/* HTML 5 video
+/* ---------------------------------------------- */
+video#html5-video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+      -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+         -o-background-size: cover;
+    background-attachment: fixed;
+}
+
+/* fix for IE8 refer to conditional comment in the <head> of the page*/
+video {
+    display: block;
+}
+
+
+/*      5.2: About section
+/* ---------------------------------------------- */
+
+
+
+
+footer {
+    background:rgba(54,53,54,.96); /* Dark color/Footer color, can be changed via colors.css */
+    color:#fff;
+    padding: 80px 0 0 0;
+}
+
+footer h2{
+    display: inline-block;
+    color:#fff;
+}
+
+footer h4{
+    margin: 0 0 20px 0;
+    padding: 0;
+    color:#fff;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+footer ul.blog-entries,
+footer ul.twitter-entries{
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer ul.blog-entries li,
+footer ul.twitter-entries li{
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+footer ul.blog-entries li span,
+footer ul.twitter-entries li span{
+    display: block;
+    color: #6d7579;
+}
+
+footer .copynote{
+    padding: 20px 0;
+    margin-top: 40px;
+    background:rgba(54, 53, 54, 1); /* Dark color/Footer color, can be changed via colors.css */
+}
+
+footer .segment{
+    padding-bottom: 20px;
+}
+
+footer .social a{
+    display: inline-block;
+    padding: 6px;
+}
+
+.scroll-top {
+    display: none;
+    position: fixed;
+    bottom: 4%;
+    right: 1%;
+    z-index: 100;
+}
+
+.scroll-top a:link,
+.scroll-top a:visited {
+    display: inline-block;
+    padding: 5px 15px;
+    color: #fff;
+    border: 1px solid rgba(254,82,76, 1);
+    background: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+    font-size: 30px;
+}
+
+.scroll-top a:hover {
+    border: 1px solid #fff; /* Hover border color, can be changed via colors.css */
+    outline: 0;
+    color: #fff;
+    background: #df514c; /* Hover color, can be changed via colors.css */
+}
+.Team-heading{
+  font-size: 20px;
+  font-family: cursive;
+  font-weight: bold;
+  color: rgba(254,82,76, 1);
+  padding-bottom: 7px;
+  padding-top: 14px;
+  padding-left: 70px;
+}
+.social-icons{
+  color:rgba(254,82,76, 1);
+  padding-top: ;
+  padding-bottom: 15px;
+  padding-left: 90px;
+}
+
+.team-img{
+  width: 250px;
+  height: 250px;
+
+}
+
+
+
+
+
+/* 11.  CSS3 Animations
+/* ---------------------------------------------- */
+
+/* Hero unit mouse animation */
+
+@-webkit-keyframes rotateplane {
+    0% {
+        -webkit-transform: translateY(-2px)
+    }
+
+    100% {
+        -webkit-transform: translateY(7px)
+    }
+}
+
+@keyframes rotateplane {
+    0% {
+        transform: translateY(-2px);
+        -webkit-transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(7px);
+        -webkit-transform: translateY(7px);
+    }
+}
+
+
+/* Navigation link animation */
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+
+/* 12:  Buttons
+/* ---------------------------------------------- */
+
+.btn {
+    border-radius: 0;
+    border: 0;
+    padding: 10px 30px;
+    text-transform: none;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+}
+
+.btn-default {
+    color: #fff;
+    border: 1px solid rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+    background: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+}
+
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-overcolor:hover,
+.btn-overcolor:focus {
+    border: 1px solid #fff; /* Hover border color, can be changed via colors.css */
+    outline: 0;
+    color: #fff;
+    background: #df514c; /* Hover color, can be changed via colors.css */
+}
+
+
+.btn-outlined {
+    border: 1px solid rgba(9,113,178, 1); /* Secondary color, can be changed via colors.cs */
+    color: #fff;
+    background-color: rgba(9,113,178, 1); /* Secondary color, can be changed via colors.cs */
+}
+
+
+.btn-outlined:hover,
+.btn-outlined:focus{
+    border: 1px solid rgba(9,113,178, 1); /* Secondary color, can be changed via colors.cs */
+    color: rgba(9,113,178, 1); /* Secondary color, can be changed via colors.cs */
+    background: transparent;
+}
+
+.btn-overcolor{
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: #fff;
+    background: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+}
+
+
+.btn-lg{
+    margin: 15px 0;
+}
+
+.circle {
+    padding: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.squared {
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+
+
+/* 14:  MEDIA QUERIES START
+/* ---------------------------------------------- */
+
+
+/* Media Queries [min-width:767px]
+/* ---------------------------------------------- */
+
+@media(min-width:767px) {
+
+    .btn {
+        font-size: 20px;
+
+    }
+
+}
+
+
+/* Media Queries [min-width:768px]
+/* ---------------------------------------------- */
+
+@media(min-width:768px) {
+    .about{
+        text-align: center;
+    }
+
+
+    p {
+        margin: 0 0 35px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .navbar-custom {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+           -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+                transition: background .5s ease-in-out, padding .5s ease-in-out;
+    }
+    .navbar-custom.top-nav-collapse {
+        padding: 10px 0;
+        background: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+           -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+                transition: background .5s ease-in-out, padding .5s ease-in-out;
+        -webkit-box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+                box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+
+    }
+
+    .navbar-custom.top-nav-collapse .navbar-brand{
+        color: #fff;
+    }
+
+    .navbar-custom.top-nav-collapse .button_container span{
+        background: #fff;
+    }
+
+    .navbar-custom.top-nav-collapse .button_container.active span.top,
+    .navbar-custom.top-nav-collapse .button_container.active span.bottom{
+        background:#fff;
+    }
+
+
+}
+
+/* Media Queries [max-width:767px]
+/* ---------------------------------------------- */
+
+@media(max-width:767px) {
+
+    .about,
+    .cta-two-section{
+        text-align: center;
+    }
+    .carousel-caption {
+        top: 30%;
+        margin: 0;
+
+    }
+
+    .carousel-caption h1 {
+        font-size: 25px;
+    }
+
+    .carousel-caption .intro-text {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .mouse{
+        display: none;
+    }
+
+    .circle {
+        padding: 0px;
+        font-size: 18px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+     .navbar-custom a{
+        color: rgba(254,82,76, 1);
+        color: #fff;
+    }
+
+    .video-section{
+        background: url(../images/youtube-video-cover.jpg) no-repeat bottom center scroll;
+    }
+
+
+    .button_container span,
+    .button_container span {
+        background: #fff !important;
+    }
+
+    .button_container.active span.top,
+    .button_container.active span.bottom{
+        background:#fff;
+    }
+
+
+    .cta-two-section .btn{
+        margin: 20px 0 0 0;
+    }
+
+    .scroll-top {
+        bottom: 4%;
+        right: 3%;
+    }
+
+    .scroll-top a:link,
+    .scroll-top a:visited {
+        padding:2px 6px;
+        font-size: 25px;
+    }
+
+}
+
+/* Media Queries [max-device-width:800px] - Fix for HTML5 videos on mobile devices
+/* ---------------------------------------------- */
+@media screen and (max-device-width: 800px) {
+    /*body {
+        background: url(../images/youtube-video-cover.jpg) #000 no-repeat center center fixed;
+    }*/
+    .html5-video-container{
+        background: url(../images/typing-on-mac.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+         -o-background-size: cover;
+        background-attachment: fixed;
+    }
+    #bgvid{
+        display: none;
+    }
+}
+
+
+/* Media Queries [min-width:992px]
+/* ---------------------------------------------- */
+@media screen and (min-width: 992px) {
+    .about{
+        text-align: left;
+    }
+
+    .video-controls,
+    .html5-video-controls{
+        display: block;
+    }
+
+    .carousel-control{
+        top: 48%;
+        margin:0%;
+    }
+
+    .products{
+        text-align: left;
+    }
+
+}
+
+
+/* Media Queries [max-width:1199px]
+/* ---------------------------------------------- */
+
+@media(max-width:1199px) {
+   .navbar-custom .button_container span {
+        background: #fff;
+    }
+
+}
+
+
+
+
+/* Selection and other generic styles
+/* ---------------------------------------------- */
+::-moz-selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    color: #fff;
+    background: rgba(254,82,76, .8);
+}
+
+::selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    color: #fff;
+    background: rgba(254,82,76, .8);
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: rgba(254,82,76, .8);
+}
+
+
+
+/* Debug styles (remove before exporting for production)
+/* ---------------------------------------------- */
+
+.debug{
+    border:1px solid #f00;
+}
