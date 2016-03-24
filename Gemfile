@@ -13,6 +13,8 @@ gem 'bootstrap-sass','3.2.0.0'
 gem 'byebug'
 gem 'devise'
 gem 'bcrypt'
+gem 'gmaps4rails'
+gem 'simple_form'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'rake','11.0.1'

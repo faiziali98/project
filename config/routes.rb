@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'appointments/new'
+
   get 'sessions/new'
   get 'users/index'
   get 'users/show'
@@ -15,7 +17,7 @@ Rails.application.routes.draw do
   get 'doctor/personal' => 'doctors#show1'
   get 'patient/search_doc' => 'patients#search'
   get 'patprof' => 'doctors#profile'
-
+  resources :appointments
   resources :users
   resources:doctors
   resources:degrees

@@ -1,8 +1,58 @@
 /*patents seaches and sees doctor profile*/
 .prof-heading{
-  padding-top: 290px;
+  padding-top: 0px;
+  padding-left: 13px;
 }
+.pat-profile{
+  padding-top: 0px;
+  padding-left: 40px;
+}
+.doc-pat-img{
+  width: 130px;
+  height: 140px;
+}
+.btn-appointment{
 
+  background:#00234b;
+  color: #fff;
+  height: 30px;
+  font-size: 17px;
+
+}
+.btn-appointment:hover{
+  color: #fff;
+  background: rgba(254,82,76, .9);
+}
+#prof-sub-heading{
+  font-size: 15px;
+  font-weight: bold;
+  color:#00234b;
+}
+#map{
+  border: 2px solid #000;
+  margin-top: -4.6em;
+}
+.sub-heading-detail{
+  font-weight: bolder;
+}
+.doc-name{
+  font-size: 26px;
+  font-weight: bolder;
+  color: #2c3e50;
+  font-family:georgia ;
+  margin-left: -3em;
+}
+.minor-details-doc-profile{
+
+  padding-top: 10px;
+}
+.doc-pat-degree{
+  font-size: 16px;
+  color: #2c3e50;
+  font-family:georgia ;
+  padding-top: 10px;
+    margin-left: -2em;
+}
 
 /*search page show */
 .search-results{
@@ -728,6 +778,14 @@ background: rgba(254,82,76, .9); /* Primary color, can be changed via colors.css
 #cont-links{
   color:rgba(254,82,76, 1);
   padding-left: 10px;
+}
+#cont-links1{
+  color:#00234b;
+  padding-left: 14px;
+  padding-bottom: 13px;
+}
+#cont-links1:hover{
+  color:inherit;
 }
 #Book-appointment{
   background-color:#f2f2f2;

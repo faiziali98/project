@@ -1,32 +1,65 @@
-<div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-2"></div>
-  <div class="col-md-2"></div>
-  <div class="col-md-2"></div>
-</div>
 
+<br/> <br/><br/><br/><br/>
 <div class="container">
   <div class="row pat-profile">
+    <div class="row">
+    <div class="col-md-1">
+      <%= image_tag("mypic.jpg", :alt => "rss feed",:class => "doc-pat-img") %>
+    </div> <br/><br/><br/><br/>
+    <div class="col-md-5 col-md-pull-1"><div class="doc-name"><%="Dr."+@doctor.name.upcase%></div>
+    <div class="row">
+      <div class="col-md-5"></div>
+      <div class="col-md-2 doc-pat-degree"><%=@doctor.profession.spec.upcase%></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-9 doc-pat-degree">
+        <a href='http://www.facebook.com/muhammadhamza'>
+         <i id="cont-links1" class='fa fa-facebook fa-lg'></i>
+        </a>
+        <a href='http://www.twitter.com/muhammadhamza'>
+         <i id="cont-links1"  class='fa fa-twitter fa-lg'></i>
+       </a>
+       <a href='http://www.facebook.com/muhammadhamza'>
+        <i id="cont-links1" class='fa fa-linkedin fa-lg'></i>
+      </a> &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp
+       <%=link_to "Appointment",{ :controller => "appointments", :action => "new", :docid =>@doctor.id },:class => "btn-appointment"%>
+     </div>
+    </div>
+    </div>
+    <!--insert MAP here-->
+    <div class="col-md-3 col-md-push-1">
+      <div style='width: 800px;'>
+        <div id="map" style='width: 400px; height: 160px;'></div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="minor-details-doc-profile">
     <div class="row prof-heading"><h2 >Qualification and  Experience</h2>
     </div>
-    <div class="row"><div class="col-md-2" id="prof-sub-heading">Education</div>
+    <div class="row"><div class="col-md-2" id="prof-sub-heading"><div class="glyphicon glyphicon-education"></div>Education</div>
 
-      <div class="col-md-10">
+      <div class="col-md-6 sub-heading-detail">
         <% if @doctor.degree.blank? %>
           <p>Not mentioned his degrees yet</p>
-        <%else%>
+        <%else%> <!--see how can we make it ;ist-->
           <%=@doctor.degree.degreeName%>
         <%end%>
       </div><hr>
-    </div>
-    <div class="row"><div class="col-md-2" id="prof-sub-heading">Fee</div>
 
-      <div class="col-md-10"><%=@doctor.profession.fee%></div>  <hr>
     </div>
-    <div class="row"><div class="col-md-2" id="prof-sub-heading">Expertise</div>
+    <div class="row"><div class="col-md-2" id="prof-sub-heading"><div class="glyphicon glyphicon-paperclip"></div>Fee</div>
 
-      <div class="col-md-10"><%=@doctor.profession.spec%></div>  <hr>
+      <div class="col-md-6 sub-heading-detail"><%=@doctor.profession.fee%></div>  <hr>
+    </div>
+    <div class="row"><div class="col-md-2 " id="prof-sub-heading"><div class="glyphicon glyphicon-thumbs-up"></div>Expertise</div>
+
+      <div class="col-md-6 sub-heading-detail"><%=@doctor.profession.spec%></div>  <hr>
     </div>
     <div class="row">
-      </div>
+    </div>
+  </div>
+</div>
 </div>

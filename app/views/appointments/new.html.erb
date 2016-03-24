@@ -1,0 +1,7 @@
+
+<br/><br/><br/><br/><br/>
+<%= simple_form_for @appointment,:url =>{ :controller => :appointments, :action => :create, :docid =>@doctor.id } do |f| %>
+  <%= f.input :appdate %>
+  <%= f.input :apptime %>
+  <%= f.button :submit %>
+<% end %>
