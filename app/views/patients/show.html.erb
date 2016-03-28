@@ -54,6 +54,7 @@
                 <div class="row">
                   <div class="col-md-6 patient-cols">
                     <button class="btn btn-lg btn-edit">Edit Profile</button>
+                    <%=link_to "Reviews", :controller => "reviews", :action => "show", :id => @patient.id %>
                   </div>
                   <div class="col-md-6 patient-cols">
                     <button class="btn btn-lg btn-edit">Logout</button>

@@ -11,6 +11,11 @@
   width: 130px;
   height: 140px;
 }
+.doc-pat-img1{
+  width: 130px;
+  height: 140px;
+  border: 3px solid #fff;
+}
 .btn-appointment{
 
   background:#00234b;

@@ -1,0 +1,98 @@
+<div class="container">
+<div class="row cover-row">
+  <div class="col-md-2 userpic">
+    <%= image_tag("mypic.jpg", :alt => "rss feed",:class => "img-circle doc-pat-img1") %>
+  </div>
+  <br/><br/><br/><br/><br/><br/><br/>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+        24
+    </div>
+      <div class="user-headings">
+        Appointments
+      </div>
+  </div>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+      9
+    </div>
+
+    <div class="user-headings">
+      Starred
+    </div>
+
+  </div>
+  <div class="col-md-3 user-blocks">
+    <div class="Number">
+      5
+    </div>
+
+    <div class="user-headings">
+      Reviews
+    </div>
+
+  </div>
+  </div>
+</div>
+  <br/><br/><br/>
+<!--FIX THIS SHIT-->
+<div class="container">
+              <div class="row">
+                <div class="col-md-2 menu">
+                  <div class="menu-item">
+                    <a class="item">Reviews</a>
+                  </div>
+                  <div class="row">
+                    <div class="menu-item">
+
+                      <a class="item">Appointments</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="menu-item">
+                      <a class="item">Starred Doc</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="menu-item">
+                      <a class="item">Logout</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                  <center>
+                    <div class="row heading-row1">Appointments</div><hr style="width:30%">
+                  </center>
+                  <% patid = current_user %>
+                  <%=patid%>
+                  <div class="row professional-row">
+                    <% @doctor.reviews.each do |c| %>
+                    <div class="row"><div class="col-md-4" id="pro-label">Doctor Name:</div><div class="col-md-8 pro-info"><% if c.patient.name.blank?%>
+                                                                                                                                  <%else%>
+                                                                                                                                  <%=c.patient.name%>
+                                                                                                                                  <%end%></div></div>
+
+                    <div class="row"><div class="col-md-4" id="pro-label">Waiting Time:</div><div class="col-md-8 pro-info"><% if c.waitTime.nil?%>
+                                                                                                                              <%="Not mentioned yet"%>
+                                                                                                                                  <%else%>
+                                                                                                                                  <%=c.waitTime%>
+                                                                                                                                  <%end%></div></div>
+                    <div class="row"><div class="col-md-4" id="pro-label">Overall Rating:</div><div class="col-md-8 pro-info"><% if c.overallRating.nil?%>
+                                                                                                                            <%="Not mentioned yet"%>
+                                                                                                                                  <%else%>
+                                                                                                                                  <%=c.overallRating%>
+                                                                                                                                  <%end%></div></div>
+                    <div class="row"><div class="col-md-4" id="pro-label">Beside Manner:</div><div class="col-md-8 pro-info"><% if c.besideManner.nil?%>
+                                                                                                                                                                                                                                          <%="Not mentioned yet"%>
+                                                                                                                                                                                                                                                <%else%>
+                                                                                                                                                                                                                                                <%=c.besideManner%>
+                                                                                                                                                                                                                                                <%end%></div></div>
+                    <hr style="width:100%">
+                    <!--<%=Time.now.utc%>
+                    <%=Time.now.strftime("%H:%M")%>
+                  -->
+                    <%end%>
+                   </div>
+                </div>
+              </div>
+            </div>

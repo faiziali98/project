@@ -1,7 +1,7 @@
 <div class="container">
 <div class="row cover-row">
   <div class="col-md-2 userpic">
-    <img class="img-responsive patient-img" src="assets/images/mypic.jpg">
+    <%= image_tag("mypic.jpg", :alt => "rss feed",:class => "img-circle doc-pat-img1") %>
   </div>
   <br/><br/><br/><br/><br/><br/><br/>
   <div class="col-md-3 user-blocks">
@@ -74,7 +74,11 @@
                                                                                                                                   <%else%>
                                                                                                                                   <%=c.doctor.name%>
                                                                                                                                   <%end%></div></div>
+                    <%=link_to "Add Review", :controller => "reviews", :action => "new", :patid => @patient.id , :docid =>c.doctor.id%>
                     <hr style="width:100%">
+                    <!--<%=Time.now.utc%>
+                    <%=Time.now.strftime("%H:%M")%>
+                  -->
                     <%end%>
                    </div>
                 </div>
