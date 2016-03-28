@@ -1,6 +1,7 @@
 class Patient < ActiveRecord::Base
 has_many :doctors
 has_many :appointments
+has_many :searches
 before_save { self.email = email.downcase }
 validates :name,  presence: true, length: { maximum: 50 }
 VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

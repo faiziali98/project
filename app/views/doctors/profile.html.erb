@@ -23,7 +23,7 @@
        <a href='http://www.facebook.com/muhammadhamza'>
         <i id="cont-links1" class='fa fa-linkedin fa-lg'></i>
       </a> &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp
-       <%=link_to "Appointment",{ :controller => "appointments", :action => "new", :docid =>@doctor.id },:class => "btn-appointment"%>
+       <%=link_to "Appointment",{ :controller => "appointments", :action => "new", :docid =>@doctor.id,:patient => params[:patid] },:class => "btn-appointment"%>
      </div>
     </div>
     </div>

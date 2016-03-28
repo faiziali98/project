@@ -66,13 +66,13 @@
                   <% patid = current_user %>
                   <%=patid%>
                   <div class="row professional-row">
-                    <% @doctor.appointments.each do |c| %>
+                    <% @patient.appointments.each do |c| %>
                     <div class="row"><div class="col-md-4" id="pro-label">Appointment Date</div><div class="col-md-8 pro-info"><%=c.appdate%></div></div>
 
                     <div class="row"><div class="col-md-4" id="pro-label">Appointment Time:</div><div class="col-md-8 pro-info"><%=c.apptime%></div></div>
-                    <div class="row"><div class="col-md-4" id="pro-label">Appointment Time:</div><div class="col-md-8 pro-info"><% if c.patient.name.nil?%>
+                    <div class="row"><div class="col-md-4" id="pro-label">Doctor:</div><div class="col-md-8 pro-info"><% if c.doctor.name.nil?%>
                                                                                                                                   <%else%>
-                                                                                                                                  <%=c.patient.name%>
+                                                                                                                                  <%=c.doctor.name%>
                                                                                                                                   <%end%></div></div>
                     <hr style="width:100%">
                     <%end%>

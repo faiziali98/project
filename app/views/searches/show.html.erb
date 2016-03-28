@@ -17,8 +17,8 @@
     <div class="col-md-9 search-heading"><%=c.name%>
       <div class="row"><div class="search-details"><%=c.profession.spec%></div></div>
       <div class="row"><div class="search-details1"><%=c.profession.fee%></div></div>
-
-      <%=link_to "Profile", :controller => "doctors", :action => "profile", :id =>c.id %>
+      
+      <%=link_to "Profile", :controller => "doctors", :action => "profile", :id =>c.id , :patid => @search.patient_id %>
 
 
 

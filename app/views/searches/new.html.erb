@@ -55,7 +55,7 @@
           <div class="form-group">
               <%= f.label :speciality,id:"label" %>
                 <%= f.text_field :speciality,class: 'form-control'  %>
-                <%= f.hidden_field :patid, :value => params[:patid]%>
+                <%= f.hidden_field :patient_id, :value => params[:patid]%>
             </div>
             <div class="form-group">
                 <%= f.submit "Search", class: "btn btn-signin" %>

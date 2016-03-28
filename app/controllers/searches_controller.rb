@@ -21,7 +21,7 @@ end
 
 private
   def search_params
-    params.require(:search).permit(:name, :speciality, :area,:gender)
+    params.require(:search).permit(:name, :speciality, :area,:gender,:patient_id)
   end
   def pat_params
     params.require(:search).permit(:patid)
