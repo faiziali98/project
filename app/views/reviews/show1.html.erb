@@ -67,7 +67,7 @@
                   <%=patid%>
                   <div class="row professional-row">
                     <% @doctor.reviews.each do |c| %>
-                    <div class="row"><div class="col-md-4" id="pro-label">Doctor Name:</div><div class="col-md-8 pro-info"><% if c.patient.name.blank?%>
+                    <div class="row"><div class="col-md-4" id="pro-label">Doctor Name:</div><div class="col-md-8 pro-info"><% if c.patient.name.present?%>
                                                                                                                                   <%else%>
                                                                                                                                   <%=c.patient.name%>
                                                                                                                                   <%end%></div></div>

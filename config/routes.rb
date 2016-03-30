@@ -10,9 +10,18 @@ Rails.application.routes.draw do
   get 'static_pages/Services'
   get 'static_pages/Contact'
   get 'static_pages/SignIn'
-  get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
+  get 'static_pages/separator'
+
+
+  get    'login/doc'   => 'doctor_sessions#new'
+  post   'login/doc'   => 'doctor_sessions#create'
+  delete 'logout'  => 'doctor_sessions#destroy'
+
+  get    'login/pat'   => 'patient_sessions#new'
+  post   'login/pat'   => 'patient_sessions#create'
+  delete 'logout'  => 'patient_sessions#destroy'
+
+
   get  'doctor' => 'doctors#show'
   get 'doctor/personal' => 'doctors#show1'
   get 'patient/search_doc' => 'patients#search'
