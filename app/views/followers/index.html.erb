@@ -23,11 +23,10 @@
        <a href='http://www.facebook.com/muhammadhamza'>
         <i id="cont-links1" class='fa fa-linkedin fa-lg'></i>
       </a> &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp
-      <%user = params[:patid]%>
        <%=link_to "Appointment",{ :controller => "appointments", :action => "new", :docid =>@doctor.id,:patient => params[:patid] },:class => "btn-appointment"%>
+       <%=link_to "Following",{ :controller => "followers", :action => "new", :docid =>@doctor.id,:patient => params[:patid] },:class => "btn-appointment"%>
 
-
-       <%=link_to "Follow",{ :controller => "followers", :action => "create", :id =>@doctor.id,:patient => params[:patid] },:class => "btn-appointment"%>
+       <!--here is the isssue it goes to the index page-->
      </div>
     </div>
   </div>
@@ -67,9 +66,3 @@
   </div>
 </div>
 </div>
-<%= form_for(@doctor.followers.build) do |f| %>
-<div><%= f.hidden_field :patient_id, :value => params[:patid] %></div>
- <div><%=f.hidden_field :doctor_id, :value => @doctor.id %></div>
- <%="FUCKER"%>
- <%= f.submit "Follow", class: "btn-appointment" %>
- <%end%>

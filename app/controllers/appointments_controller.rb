@@ -9,6 +9,7 @@ class AppointmentsController < ApplicationController
     @patient = Patient.find(params[:patient])
     @appointment = @doctor.appointments.build(user_params)
     @patappointment =@patient.appointments.build(user_params)
+    #make a check for both Doctor and patient
     if @appointment.save
       redirect_to(controller: 'doctors',action: 'show' ,id: @doctor.id)
     end
