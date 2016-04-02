@@ -5,7 +5,18 @@ class ProfessionsController < ApplicationController
     @doctor = Doctor.find(params[:id])
     @office = @doctor.profession
   end
+  def edit
+    @doctor = Doctor.find(params[:id])
+    @office=@doctor.profession
 
+  end
+  def update
+    @doctor = Doctor.find(params[:id])
+    @office = @doctor.profession
+    if @office.update(profession_params)
+      redirect_to static_pages_Home_path
+    end
+  end
   def new
     @doctor = Doctor.find(params[:id])
     @office=@doctor.build_profession

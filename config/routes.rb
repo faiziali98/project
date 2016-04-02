@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get 'patient/search_doc' => 'patients#search'
   get 'patprof' => 'doctors#profile'
   get 'patient/appointments/:id'=> 'appointments#show1'
+  resources :activities
   resources :appointments
   resources :users
   resources:doctors

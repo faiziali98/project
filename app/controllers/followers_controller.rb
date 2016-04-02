@@ -3,7 +3,7 @@ def index
 end
 def new
   @doctor = Doctor.find(params[:id])
-  @patient = Patient.find(params[:id])
+  #@patient = Patient.find(params[:id])
 
 end
 
@@ -13,14 +13,14 @@ def create
   #@follow = @docfollowed.followers.build
   @docfollow = @doctor.followers.create(follower_params);
   #Rails.logger.debug("My object: #{@docfollowed.inspect}")
-  @patfollow = @patient.followers.create(follower_params);
+  #@patfollow = @patient.followers.create(follower_params);
   #Rails.logger.debug("My object: #{@patfollow.inspect}")
-  if @patfollow.save
+  if @docfollow.save
 
     #redirect_to static_pages_Home_path
     redirect_to(controller: "followers" , action:"new",:id =>@doctor.id ,:pid => @patient.id);
   else
-    #redirect_to static_pages_Home_path
+    redirect_to static_pages_Home_path
   end
 end
 

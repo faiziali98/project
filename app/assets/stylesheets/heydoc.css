@@ -1,3 +1,9 @@
+.activity .notification a {
+  padding: 16px 0;
+  color: #000;
+  border-bottom: 1px solid #CCC;
+}
+
 /*
 head sepaator page which separates doctors from patients
 */

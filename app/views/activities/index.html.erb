@@ -1,0 +1,7 @@
+<% @activities.each do |activity| %>
+<br/><br/><br/><br/><br/>
+  <div class="activity">
+        <div class="notification"><%= link_to activity.owner.name, activity.owner if activity.owner%> stated Following You</div>
+
+  </div>
+<% end %>

@@ -6,7 +6,7 @@ gem 'rails', '4.1.8'
 gem 'minitest-reporters'
 gem 'mini_backtrace'
 gem 'guard'
-
+gem 'public_activity'
 gem 'vider', github: 'wazery/vider'
 gem 'bootstrap-generators', '~> 3.3.4'
 gem "twitter-bootstrap-rails"

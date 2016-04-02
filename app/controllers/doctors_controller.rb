@@ -6,7 +6,7 @@ class DoctorsController < ApplicationController
   def show
   #shows all the doctors per id
   #change it later and ask TA for help
-  @doctor = Doctor.find(params[:format])
+  @doctor = Doctor.find(params[:id])
   end
 
   def edit
