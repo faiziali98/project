@@ -1,5 +1,5 @@
 class Doctor < ActiveRecord::Base
-
+  has_many :comments
   has_many :appointments
   has_one :profession
   has_one :degree

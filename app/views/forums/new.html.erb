@@ -1,0 +1,13 @@
+<br/><br/><br/><br/><br/><br/><br/>
+<div class="container"><div class="row"><div class="class-md-4">
+  <div class="form-group">
+  <%= form_for (@forum) do |f| %>
+
+    <%=f.text_field :title , :placeholder => "Title of Question",:class => 'form-control discussion-form'%>
+    <br/>
+    <%=f.text_field :body , :placeholder => "Question goes here" ,:class => 'form-control discussion-form'%>
+    <%=f.hidden_field :patient_id,:value =>params[:patid] %>
+    <%=f.submit "Post Question" %>
+  <%end%>
+</div>
+</div></div></div>

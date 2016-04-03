@@ -6,9 +6,12 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include PatientSessionsHelper
   include DoctorSessionsHelper
-  def current_user
+  def current_patuser
     @current_user ||= Patient.find_by(id: session[:user_id])
   end
+  def current_docuser
+    @current_user ||= Doctor.find_by(id: session[:user_id])
+  end
   helper_method :current_user
-  hide_action :current_user
+  hide_action :current_patuser
 end

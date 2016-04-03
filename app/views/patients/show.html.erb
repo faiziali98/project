@@ -52,11 +52,15 @@
                     </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-6 patient-cols">
+                  <div class="col-md-4 patient-cols">
                     <button class="btn btn-lg btn-edit">Edit Profile</button>
                     <%=link_to "Reviews", :controller => "reviews", :action => "show", :id => @patient.id %>
                   </div>
-                  <div class="col-md-6 patient-cols">
+                  <div class="col-md-4 patient-cols">
+                    <button class="btn btn-lg btn-edit">Edit Profile</button>
+                    <%=link_to "Post Question", :controller => "forums", :action => "new", :patid => @patient.id %>
+                  </div>
+                  <div class="col-md-4 patient-cols">
                     <button class="btn btn-lg btn-edit">Logout</button>
                   </div>
               </div>

@@ -1,7 +1,9 @@
 class Patient < ActiveRecord::Base
   include PublicActivity::Model
-  tracked owner: ->(controller, model) { controller && controller.current_user }
+  tracked owner: ->(controller, model) { controller && controller.current_patuser }
 has_many :doctors
+has_many :comments
+has_many :forums
 has_many :appointments
 has_many :searches
 has_many :reviews

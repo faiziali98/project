@@ -1,0 +1,11 @@
+
+<%=form_for([@forum,@forum.comments.build]) do |f| %>
+  <p>
+    <%=f.text_area :body, :placeholder => "Comments goes here" %>
+  </p>
+  <p>
+    <%=f.submit "Join Discussion"%>
+  </p>
+  <p>
+  </p>
+<%end%>

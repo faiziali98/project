@@ -1,0 +1,16 @@
+<br/><br/><br/><br/><br/>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"><h2>Questions</h2>
+      <%@forum.each do |question|%>
+      <div class="activity">
+        <div class="notification">
+          <%=link_to question.title, :controller => "forums", :action => "search", :id => question.id , :patid =>@patient.id%>
+        </div>
+      <%end%>
+    </div>
+  </div>
+    <div class="col-md-3"> <h2>Posted</h2>
+    </div>
+</div>
+</div>

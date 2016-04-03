@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160402064537) do
+ActiveRecord::Schema.define(version: 20160402143224) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -39,6 +39,15 @@ ActiveRecord::Schema.define(version: 20160402064537) do
     t.integer  "patient_id"
     t.date     "appdate"
     t.time     "apptime"
+  end
+
+  create_table "comments", force: true do |t|
+    t.string   "body"
+    t.integer  "doctor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "patient_id"
+    t.integer  "forum_id"
   end
 
   create_table "d_certs", force: true do |t|
@@ -124,6 +133,15 @@ ActiveRecord::Schema.define(version: 20160402064537) do
     t.integer  "patient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "forums", force: true do |t|
+    t.string   "title"
+    t.string   "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "patient_id"
+    t.integer  "forum_id"
   end
 
   create_table "pappointments", force: true do |t|
