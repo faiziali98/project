@@ -70,6 +70,6 @@
 <%= form_for(@doctor.followers.build) do |f| %>
 <div><%= f.hidden_field :patient_id, :value => params[:patid] %></div>
  <div><%=f.hidden_field :doctor_id, :value => @doctor.id %></div>
- <%="FUCKER"%>
+
  <%= f.submit "Follow", class: "btn-appointment" %>
  <%end%>

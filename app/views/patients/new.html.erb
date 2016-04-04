@@ -2,11 +2,11 @@
  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
  <%= csrf_meta_tags %>
 
+<!--
 <div class="row heading-row">
   <center><h1>Please SignUp</h1><hr style="width:30%;"> </center>
 </div>
 <div class="left-side">
-  <!--Half of the page -->
 
 </div>
 <div class="right-side" >
@@ -56,7 +56,78 @@
 
 
                 </div><!-- /.contact-form -->
-
+<!--
             </div><!-- /.row -->
         </div><!-- /.container -->
 </div>
+
+
+<body>
+<!--/login-->
+ <div class="error_page">
+		<!--/login-top-->
+
+			<div class="error-top">
+			<h2 class="inner-tittle page">Sign Up</h2>
+			    <div class="login">
+						    <div class="buttons login">
+									<ul>
+
+										<div class="clearfix"></div>
+									</ul>
+								</div>
+
+                <%= form_for(@patient) do |f| %>
+                  <div class="form-group">
+                    <%= f.label :name, id:"label"%>
+                    <%= f.text_field :name,class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                      <%= f.label :email,id:"label" %>
+                        <%= f.email_field :email,class: 'form-control'  %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :sex,id:"label" %>
+                          <%= f.text_field :sex,class: 'form-control'  %>
+                      </div>
+                      <div class="form-group">
+                          <%= f.label :phone,id:"label" %>
+                            <%= f.text_field :phone,class: 'form-control'  %>
+                        </div>
+                    <div class="form-group">
+                          <%= f.label :password,id:"label" %>
+                          <%= f.password_field :password,class: 'form-control' %>
+                      </div>
+                      <div class="form-group">
+                          <%= f.label :password_confirmation, "Confirmation",id:"label" %>
+                          <%= f.password_field  :password_confirmation,class: 'form-control' %>
+                      </div>
+                      <div class="row checkboxesrow">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4 ">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                          <%= f.submit "Sign Up", class: "" %>
+                      </div>
+                    <%end %>
+
+							<!--	<input type="text" class="text" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}" >
+								<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+								<div class="submit"><input type="submit" onclick="myFunction()" value="Login" ></div>
+								<div class="clearfix"></div>
+              -->
+								<div class="new">
+									<p class="sign">Do you have account already ? <%=link_to "Log In", login_pat_path%></p>
+									<div class="clearfix"></div>
+								</div>
+
+				</div>
+
+
+			</div>
+
+
+		<!--//login-top-->
+   </div>
