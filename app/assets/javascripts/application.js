@@ -17,6 +17,7 @@
 //= require_tree .
 //= bootstrap.min
 //= heydoc
+//=css3clock
 //= require jquery.vide
 //= require bootstrap
 //=require Underscore

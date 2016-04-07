@@ -14,7 +14,7 @@ class ProfessionsController < ApplicationController
     @doctor = Doctor.find(params[:id])
     @office = @doctor.profession
     if @office.update(profession_params)
-      redirect_to static_pages_Home_path
+      redirect_to(controller: 'doctors',action: 'show' ,id: @doctor.id)
     end
   end
   def new

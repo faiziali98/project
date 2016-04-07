@@ -17,8 +17,10 @@ class DoctorsController < ApplicationController
   end
   def update
     @doctor = Doctor.find(params[:id])
-    if @doctor.update_attributes(user_params)
-      redirect_to @doctor
+    if @doctor.update(user_params)
+      redirect_to(controller: 'doctors',action: 'show' ,id: @doctor.id)
+    else
+        #redirect_to(controller: 'doctors',action: 'show' ,id: @doctor.id)
     end
   end
 
@@ -49,7 +51,7 @@ class DoctorsController < ApplicationController
 
   private
   def user_params
-     params.require(:doctor).permit(:name, :email, :password,
+     params.require(:doctor).permit(:name, :email, :password,:phone,:sex,
                                   :password_confirmation)
   end
 end

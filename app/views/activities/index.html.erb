@@ -1,7 +1,10 @@
 <% @activities.each do |activity| %>
 <br/><br/><br/><br/><br/>
   <div class="activity">
-        <div class="notification"><%= link_to activity.owner.name, activity.owner if activity.owner%> stated Following You</div>
+        <%=activity.inspect%>
+        <div class="notification"><%= link_to activity.owner.name, activity.owner if activity.owner %>
+          <%= render_activity activity%>
+        </div>
 
   </div>
 <% end %>

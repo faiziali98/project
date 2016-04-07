@@ -1,76 +1,28 @@
-<div class="container">
-<div class="row cover-row">
-  <div class="col-md-2 userpic">
-    <img class="img-responsive patient-img" src="assets/images/mypic.jpg">
-  </div>
-  <br/><br/><br/><br/><br/><br/><br/>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-        24
-    </div>
-      <div class="user-headings">
-        Appointments
-      </div>
-  </div>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-      9
-    </div>
-
-    <div class="user-headings">
-      Starred
-    </div>
-
-  </div>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-      5
-    </div>
-
-    <div class="user-headings">
-      Reviews
-    </div>
-
-  </div>
-  </div>
-</div>
-  <br/><br/><br/>
-<!--FIX THIS SHIT-->
-<div class="container">
-              <div class="row">
-                <div class="col-md-2 menu">
-                  <div class="menu-item">
-                    <a class="item">Reviews</a>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-
-                      <a class="item">Appointments</a>
+<br/><br/><br/><br/><br/>
+    <%= render 'layouts/docbar'%>
+    <br/>
+    <div class="profile-section-inner">
+        <div class="row">
+            <div class="col-md-4 col-md-push-3 profile-info">
+            <h3 class="inner-tittle">Academic Information</h3>
+               <div class="main-grid3">
+                   <div class="p-20">
+                      <% @degree.each do |c| %>
+                      <div class="about-info-p">
+                          <strong>Degree</strong>
+                          <br>
+                          <p class="text-muted"><% if ((@degree) && (c.degreeName))%><%adder=true%><%=c.degreeName%><%else%><%="Please Add University Name"%><%end%></p>
+                        </div>
+                        <div class="about-info-p">
+                          <strong>University</strong>
+                          <br>
+                          <p class="text-muted"><% if ((@degree) && (c.uniName))%><%=c.uniName%><%else%><%="Please Add University Name"%><%end%></p>
+                        </div>
+                        <%end%>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="menu-item">
-                      <a class="item">Starred Doc</a>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-                      <a class="item">Logout</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-10">
-                  <center>
-                    <div class="row heading-row1">Academic Information</div><hr style="width:30%">
-                  </center>
-                  <div class="row professional-row">
-                  <div class="degree-box">
-                    <div class="row"><div class="col-md-4" id="pro-label">1st Qualification:</div><div class="col-md-8 pro-info"><%=@degree.degreeName%></div></div>
-                    <hr style="width:30%">
-                    <div class="row"><div class="col-md-4" id="pro-label">From:</div><div class="col-md-8 pro-info"><%=@degree.uniName%></div></div>
-                    <hr style="width:30%">
-                  </div>
-                </div>
-                </div>
+                  <br/>
+                  <%= link_to "Add Qualification",{:controller => :degrees ,:action => :new ,:id => @doctor.id}, :class => "btn btn-edit" %>
               </div>
-            </div>
+          </div>
+      </div>

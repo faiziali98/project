@@ -1,95 +1,50 @@
-<div class="container">
-<div class="row cover-row">
-  <div class="col-md-2 userpic">
-    <img class="img-responsive patient-img" src="assets/images/mypic.jpg">
-  </div>
-  <br/><br/><br/><br/><br/><br/><br/>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-        24
-    </div>
-      <div class="user-headings">
-        Appointments
-      </div>
-  </div>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-      9
-    </div>
-
-    <div class="user-headings">
-      Starred
-    </div>
-
-  </div>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-      5
-    </div>
-
-    <div class="user-headings">
-      Reviews
-    </div>
-
-  </div>
-  </div>
-  <br/><br/><br/>
-<!--FIX THIS SHIT-->
-
-              <div class="row">
-                <div class="col-md-2 menu">
-                  <div class="menu-item">
-                    <a class="item">Reviews</a>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-
-                      <a class="item">Appointments</a>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-                      <a class="item">Starred Doc</a>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-                      <a class="item">Logout</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-10 edit-form">
-                  <center>
-                  <div class="form-group">
-                  <%= form_for (@office),:url =>{:controller =>:professions , :action => :create, :id => @doctor.id } do |f| %>
-                    <%= f.label :spec, id:"label1"%>
-                      <%= f.text_field :spec,class: 'form-control' %>
-                    </div>
+<br/><br/><br/><br/><br/>
+<%= render 'layouts/docbar'%>
+<div class="row">
+    <div class="profile-section-inner">
+          <div class="col-md-6 col-md-push-3 profile-info">
+            <h3 class="inner-tittle">Edit Personal Information </h3>
+            <div class="main-grid3">
+                <div class="p-20">
+                    <%= form_for (@office),:url =>{:controller =>:professions , :action => :create, :id => @doctor.id } do |f| %>
                     <div class="form-group">
-                        <%= f.label :fee,id:"label1" %>
-                          <%= f.text_field :fee,class: 'form-control'  %>
-                      </div>
-                    <div class="form-group">
-                        <%= f.label :offstart,id:"label1" %>
-                        <%= f.text_field :offstart,class: 'form-control'  %>
-                      </div>
-                      <div class="form-group">
-                          <%= f.label :offend,id:"label1" %>
-                            <%= f.text_field :offend,class: 'form-control'  %>
+                        <div class="about-info-p">
+                            <strong>Speciality</strong>
+                            <br/>
+                            <%= f.text_field :spec,class: 'form-control text-muted' %>
                         </div>
+                    </div>
                         <div class="form-group">
-                            <%= f.label :address,id:"label1" %>
-                              <%= f.text_field :address,class: 'form-control'  %>
+                            <div class="about-info-p">
+                                <strong>Fee</strong>
+                                <%= f.text_field :fee,class: 'form-control text-muted'  %>
                           </div>
-
-
+                      </div>
                         <div class="form-group">
-                            <%= f.submit "Add Professional Info", class: "btn btn-edit" %>
+                            <div class="about-info-p">
+                                <strong>Office Hours Starting Time</strong>
+                                <%= f.text_field :offstart,class: 'form-control text-muted'  %>
+                            </div>
                         </div>
-                      <%end %>
-                      <center>
-                    </div><!-- /.contact-form -->
-
+                        <div class="form-group">
+                            <div class="about-info-p">
+                                <strong>Office Hours Ending Time</strong>
+                                <%= f.text_field :offend,class: 'form-control text-muted'  %>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="about-info-p">
+                                <strong>Office Address</strong>
+                                <%= f.text_field :address,class: 'form-control text-muted'  %>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <%= f.submit "Save Changes", class: "btn btn-edit" %>
+                            </div>
+                          <%end %>
+                          <center>
+                        </div><!-- /.contact-form -->
                     </div>
                 </div>
+            </div>
+        </div>

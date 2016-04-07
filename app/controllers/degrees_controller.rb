@@ -1,17 +1,17 @@
 class DegreesController < ApplicationController
   def show
     @doctor = Doctor.find(params[:id])
-    @degree = @doctor.degree
+    @degree = @doctor.degrees
   end
 
   def new
     @doctor = Doctor.find(params[:id])
-    @degree=@doctor.build_degree
+    @degree=@doctor.degrees.build
   end
 
   def create
     @doctor = Doctor.find(params[:id])
-    @degree=@doctor.build_degree(degree_params)
+    @degree=@doctor.degrees.build(degree_params)
     if @degree.save
       redirect_to(controller: 'doctors',action: 'show' ,id: @doctor.id)
     else

@@ -1,2 +1,35 @@
-<h1>Educations#edit</h1>
-<p>Find me in app/views/educations/edit.html.erb</p>
+<br/><br/><br/><br/><br/>
+<%= render 'layouts/docbar'%>
+<div class="row">
+    <div class="profile-section-inner">
+          <div class="col-md-6 col-md-push-3 profile-info">
+            <h3 class="inner-tittle">Edit Personal Information </h3>
+            <div class="main-grid3">
+                <div class="p-20">
+                  <%= form_for (@degree),:url =>{:controller =>:degrees ,:action => :update, :id => @doctor.id} do |f| %>
+                      <div class="form-group">
+                          <div class="about-info-p">
+                              <strong>Degree</strong>
+                              <br/>
+                              <%= f.text_field :degreeName,class: 'form-control text-muted' %>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="about-info-p">
+                              <strong>University</strong>
+                              <br/>
+                              <%= f.text_field :uniName,class: 'form-control text-muted' %>
+                          </div>
+                      </div>
+
+                        <div class="form-group">
+                            <%= f.submit "Add Degree", class: "btn btn-edit" %>
+                        </div>
+                      <%end %>
+                      <center>
+                    </div><!-- /.contact-form -->
+
+                    </div>
+                </div>
+            </div>
+        </div>

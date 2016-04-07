@@ -1,0 +1,50 @@
+<br/><br/><br/><br/><br/>
+<%= render 'layouts/docbar'%>
+<div class="row">
+    <div class="profile-section-inner">
+          <div class="col-md-6 col-md-push-3 profile-info">
+            <h3 class="inner-tittle">Edit Personal Information </h3>
+            <div class="main-grid3">
+                <div class="p-20">
+                    <%= form_for (@office),:url =>{:controller =>:professions , :action => :update, :id => @doctor.id } do |f| %>
+                    <div class="form-group">
+                        <div class="about-info-p">
+                            <strong>Speciality</strong>
+                            <br/>
+                            <%= f.text_field :spec,class: 'form-control text-muted' %>
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            <div class="about-info-p">
+                                <strong>Fee</strong>
+                                <%= f.text_field :fee,class: 'form-control text-muted'  %>
+                          </div>
+                      </div>
+                        <div class="form-group">
+                            <div class="about-info-p">
+                                <strong>Office Hours Starting Time</strong>
+                                <%= f.text_field :offstart,class: 'form-control text-muted'  %>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="about-info-p">
+                                <strong>Office Hours Ending Time</strong>
+                                <%= f.text_field :offend,class: 'form-control text-muted'  %>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="about-info-p">
+                                <strong>Office Address</strong>
+                                <%= f.text_field :address,class: 'form-control text-muted'  %>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <%= f.submit "Save Changes", class: "btn btn-edit" %>
+                            </div>
+                          <%end %>
+                          <center>
+                        </div><!-- /.contact-form -->
+                    </div>
+                </div>
+            </div>
+        </div>

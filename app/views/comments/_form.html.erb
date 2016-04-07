@@ -2,6 +2,7 @@
 <%=form_for([@forum,@forum.comments.build]) do |f| %>
   <p>
     <%=f.text_area :body, :placeholder => "Comments goes here" %>
+    <%=f.hidden_field :patient_id , :value =>params[:patid]%>
   </p>
   <p>
     <%=f.submit "Join Discussion"%>

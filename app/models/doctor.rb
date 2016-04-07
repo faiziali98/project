@@ -2,7 +2,7 @@ class Doctor < ActiveRecord::Base
   has_many :comments
   has_many :appointments
   has_one :profession
-  has_one :degree
+  has_many :degrees
   has_many :reviews
   has_many :followers
   before_save { self.email = email.downcase }

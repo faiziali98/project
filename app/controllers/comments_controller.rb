@@ -13,8 +13,9 @@ class CommentsController < ApplicationController
   end
   def create
     @forum = Forum.find(params[:forum_id])
+    @patient = Patient.find(params[:comment][:patient_id])
     @comment=@forum.comments.create(params[:comment].permit(:body));
-    redirect_to discussion_form_path
+    redirect_to(:controller=>:forums,:action=>:search,:patid=>@patient.id,:id=>@forum.id)
   end
   def edit
 
