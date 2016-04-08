@@ -18,7 +18,7 @@ class ForumsController < ApplicationController
     @patient = Patient.find(params[:forum][:patient_id]);
     @forum = @patient.forums.build(forum_params);
     if @forum.save
-      redirect_to(:controller =>:forums , :action => :search,:patid=>@patient.id, :id=>@forum.id);
+      redirect_to(:controller =>:forums , :action => :show,:patid=>@patient.id, :id=>@forum.id);
       #redirect_to discussion_form_path
     end
 

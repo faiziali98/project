@@ -1,4 +1,39 @@
 <br/><br/><br/><br/><br/>
+<%= render 'layouts/patbar'%>
+<br/><br/>
+   <div class="profile-widget">
+                <h2>HeyDoc Discussion Forum</h2>
+                <%=link_to "Post Question",{ :controller => "forums", :action => "new", :patid => @patient.id},:class =>"btn btn-post" %>
+            </div>
+<br/>
+<div class="row">
+    <div class="col-md-6 col-md-push-3">
+<div class="graph-visual tables-main">
+    <div class="graph">
+        <div class="tables">
+            <table class="table">
+                    <thead>
+                        <tr>
+                          <th><strong>Title</strong></th>
+                          <th><strong>Posted By</strong></th>
+                          <th><strong>Posted Time</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @forum.each do |f|%>
+                        <tr>
+
+                          <td><%if @forum && f.title%><%=link_to f.title.upcase,{:controller =>:forums,:action =>:search,:id =>f.id,:patid => @patient.id},:class => "qtitle"%><%else%><%=%><%end%></td>
+                          <td><%if @patient && f.patient.name%><%=f.patient.name.upcase%><%else%><%=%><%end%></td>
+                          <td><%if @forum && f.title%><%= time_ago_in_words(f.created_at)%><%else%><%=%><%end%></td>
+                        </tr>
+                        <%end%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+<!-- <br/><br/><br/><br/><br/>
+
 <div class="container">
   <div class="row">
     <div class="col-md-4"><h2>Questions</h2>
@@ -13,4 +48,4 @@
     <div class="col-md-3"> <h2>Posted</h2>
     </div>
 </div>
-</div>
+</div> -->

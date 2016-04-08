@@ -1,0 +1,25 @@
+<div class="sidebar-menu">
+  <br/><br/><br/>
+  <header class="logo">
+  <span id="logo"> <h1>HeyDoc</h1></span>
+  <!--<img id="logo" src="" alt="Logo"/>-->
+  </a>
+</header>
+<div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+<!--/down-->
+      <div class="down">
+            <%= image_tag("mypic.jpg", :alt => "rss feed",:class => "doc-pat-img") %>
+            <p><span class=" name-caret"><b><%=@doctor.name.upcase%><b></span></p>
+
+      </div>
+         <!--//down-->
+        <div class="menu">
+          <ul id="menu" >
+            <li><span><%=link_to "Dashboard", {:controller=>:doctors,:action=>:show,:id=>@doctor.id} %></span></li>
+            <li><span><%= link_to "Appointments",:controller => :appointments ,:action => :show ,:id => @doctor.id%></span></li>
+            <li><span><%= link_to "See Professional Info",:controller => :professions ,:action => :show ,:id => @doctor.id %></span></li>
+            <li><span><%= link_to "See your Qualification",:controller => :degrees ,:action => :show ,:id => @doctor.id %></span></li>
+
+          </ul>
+        </div>
+       </div>

@@ -1,0 +1,29 @@
+<div class="sidebar-menu">
+  <br/><br/><br/>
+  <header class="logo">
+  <span id="logo"> <h1>PROFILE</h1></span>
+  <!--<img id="logo" src="" alt="Logo"/>-->
+  </a>
+</header>
+<div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+<!--/down-->
+      <div class="down">
+            <%= image_tag("mypic.jpg", :alt => "rss feed",:class => "doc-pat-img") %>
+            <p><span class=" name-caret"><b><%=@doctor.name.upcase%><b></span></p>
+
+      </div>
+         <!--//down-->
+        <div class="menu">
+          <ul id="menu" >
+            <li><span><%=link_to "Book Appointment",{ :controller => "appointments", :action => "new", :docid =>@doctor.id,:patient => params[:patid] }%></span></li>
+            <li><span><%=link_to "Search Doctors", :controller => "searches", :action => "new", :id =>@doctor.id,:patid => params[:patid], :method => :post%></span></li>
+            <%= form_for(@doctor.followers.build) do |f| %>
+            <div><%= f.hidden_field :patient_id, :value => params[:patid] %></div>
+             <div><%=f.hidden_field :doctor_id, :value => @doctor.id %></div>
+             <li><span><%= f.submit "Follow", class:"button"%></span></li>
+             <%end%>
+
+            <li><span><%=link_to "Back to Dashboard", {:controller=>:patients,:action=>:show,:id => params[:patid]} %></span></li>
+          </ul>
+        </div>
+       </div>

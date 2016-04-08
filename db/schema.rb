@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160402143224) do
+ActiveRecord::Schema.define(version: 20160407220444) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -192,9 +192,9 @@ ActiveRecord::Schema.define(version: 20160402143224) do
 
   create_table "searches", force: true do |t|
     t.string   "name"
-    t.string   "area"
-    t.string   "gender"
-    t.string   "speciality"
+    t.string   "address"
+    t.string   "sex"
+    t.string   "spec"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "patient_id"

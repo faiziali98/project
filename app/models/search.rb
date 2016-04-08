@@ -3,11 +3,9 @@ class Search < ActiveRecord::Base
   belongs_to :patient
   def search_docs
     doctors = Doctor.all;
+    profession = Profession.all;
     doctors = doctors.where(["name LIKE ?",name]) if name.present?
-    doctors = doctors.where(["name LIKE ?",gender]) if gender.present?
-    doctors = doctors.where(["speciality LIKE ?",doctors.profession.spec]) if speciality.present?
-    doctors = doctors.where(["area LIKE ?",doctors.profession.area]) if area.present?
+    doctors = doctors.where(["sex LIKE ?",sex]) if sex.present?
     return doctors
-  end
-
+    end
 end

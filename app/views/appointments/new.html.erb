@@ -2,8 +2,8 @@
 <br/><br/><br/><br/><br/>
 <%= simple_form_for @appointment,:url =>{ :controller => :appointments, :action => :create, :docid =>@doctor.id , :patient =>@patient.id } do |f| %>
   <%= f.input :appdate %>
-  <%=@patient.id%>
+
   <%= f.hidden_field :patient_id, :value => @patient.id%>
   <%= f.input :apptime %>
-  <%= f.button :submit %>
+  <%= f.button :submit , :class=>"btn btn-edit" %>
 <% end %>

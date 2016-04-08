@@ -1,90 +1,60 @@
-<!--PUT THE FORM INTO A LAYOUT AND THEN RENDER IT -->
-
-<div class="container">
-<div class="row cover-row">
-  <div class="col-md-2 userpic">
-    <img class="img-responsive patient-img" src="assets/images/mypic.jpg">
-  </div>
-  <br/><br/><br/><br/><br/><br/><br/>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-        24
-    </div>
-      <div class="user-headings">
-        Appointments
-      </div>
-  </div>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-      9
-    </div>
-
-    <div class="user-headings">
-      Starred
-    </div>
-
-  </div>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-      5
-    </div>
-
-    <div class="user-headings">
-      Reviews
-    </div>
-
-  </div>
-  </div>
-  <br/><br/><br/>
-<!--FIX THIS SHIT-->
-
-              <div class="row">
-                <div class="col-md-2 menu">
-                  <div class="menu-item">
-                    <a class="item">Reviews</a>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-
-                      <a class="item">Appointments</a>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-                      <a class="item">Starred Doc</a>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-                      <a class="item">Logout</a>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div class="col-md-10 edit-form">
-                  <center>
+<br/><br/><br/><br/><br/>
+<%= render 'layouts/patbar'%>
+<div class="row">
+    <div class="profile-section-inner">
+          <div class="col-md-7 col-md-push-3 profile-info">
+            <h3 class="inner-tittle">Edit Personal Information </h3>
+            <div class="main-grid3">
+                <div class="p-20">
                   <div class="form-group">
-                  <%= form_for(@doctor) do |f| %>
-                    <%= f.label :name, id:"label1"%>
-                      <%= f.text_field :name,class: 'form-control' %>
-                    </div>
-                    <div class="form-group">
-                        <%= f.label :email,id:"label1" %>
-                          <%= f.email_field :email,class: 'form-control'  %>
+                  <%= form_for(@patient) do |f| %>
+                  <div class="form-group">
+                      <div class="about-info-p">
+                          <strong>Name</strong>
+                          <br/>
+                          <%= f.text_field :name,class: 'form-control text-muted' %>
                       </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div class="about-info-p">
+                          <strong>Email</strong>
+                          <br/>
+                          <%= f.text_field :email,class: 'form-control text-muted' %>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="about-info-p">
+                          <strong>Contact Number</strong>
+                          <br/>
+                          <%= f.text_field :phone,class: 'form-control text-muted' %>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="about-info-p">
+                          <strong>Gender</strong>
+                          <br/>
+                          <%= f.text_field :sex,class: 'form-control text-muted' %>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="about-info-p">
+                          <strong>Password</strong>
+                          <br/>
+                          <%= f.text_field :password,class: 'form-control text-muted' %>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="about-info-p">
+                          <strong>Confirm Password</strong>
+                          <br/>
+                          <%= f.text_field :password_confirmation,class: 'form-control text-muted' %>
+                      </div>
+                  </div>
                       <div class="form-group">
-                            <%= f.label :password,    id:"label1" %>
-                            <%= f.password_field :password,class: 'form-control' %>
-                        </div>
-                        <div class="form-group">
-                            <%= f.label :password_confirmation, "Confirmation",id:"label1" %>
-                            <%= f.password_field  :password_confirmation,class: 'form-control' %>
-                        </div>
-                        <div class="form-group">
-                            <%= f.submit "Edit Info", class: "btn btn-edit" %>
-                        </div>
-                      <%end %>
+                          <%= f.submit "Save Changes", class: "btn btn-edit" %>
+                      </div>
+                    <%end %>
                       <center>
                     </div><!-- /.contact-form -->
 

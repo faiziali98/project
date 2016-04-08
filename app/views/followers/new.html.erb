@@ -1,4 +1,79 @@
+<br/><br/><br/><br/>
+<%= render 'layouts/following'%>
 
+
+<div class="custom-widgets">
+   <div class="row-one">
+        <div class="col-md-3 col-md-push-3  widget">
+            <div class="stats-left ">
+                <h5>Total</h5>
+                <h4> Views</h4>
+            </div>
+            <div class="stats-right">
+                <label>0</label>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="col-md-3 col-md-push-3 widget states-mdl">
+            <div class="stats-left">
+                <h5>Total</h5>
+                <h4>Followers</h4>
+            </div>
+            <div class="stats-right">
+                <label><%=@doctor.followers.count%></label>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="col-md-3 col-md-push-3 widget states-thrd">
+            <div class="stats-left">
+                <h5>Total</h5>
+                <h4>Appointments</h4>
+            </div>
+            <div class="stats-right">
+                <label><%=@doctor.appointments.count%></label>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+     <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- This is the personal info section -->
+<div class="profile-section-inner">
+      <div class="col-md-6 col-md-push-3 profile-info">
+     <h3 class="inner-tittle">Personal Information </h3>
+     <div class="main-grid3">
+        <div class="p-20">
+            <% @doctor.degrees.each do |c| %>
+            <div class="about-info-p">
+                <div class="glyphicon glyphicon-education" style="color:#002561;"></div><strong>Qualifications</strong>
+                <br>
+                <div class="text-muted"><% if ((@doctor.degrees) && (c.degreeName))%><%adder=true%><%=c.degreeName%><%=" "%><%else%><%="Please Add University Name"%><%end%></p>
+              </div>
+          </div>
+            <%end%>
+            <div class="about-info-p">
+              <strong>Speciality</strong>
+              <br>
+              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.spec))%><%=@doctor.profession.spec%><%else%><%="Will be Available Soon"%><%end%></p>
+            </div>
+            <div class="about-info-p">
+              <strong>Fee</strong>
+              <br>
+              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.fee))%><%=@doctor.profession.fee%><%else%><%="Will be Available Soon"%><%end%> PKR</p>
+            </div>
+            <div class="about-info-p">
+              <strong>Office Timings</strong>
+              <br>
+              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.offstart) &&(@doctor.profession.offend))%><%=@doctor.profession.offstart%><%="-"%><%=@doctor.profession.offstart%>(24-hour format)<%else%><%="Will be Available Soon"%><%end%></p>
+            </div>
+            <div class="about-info-p m-b-0">
+              <strong>Office Address</strong>
+              <br>
+              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.address))%><%=@doctor.profession.address%><%else%><%="Will be Available Soon"%><%end%></p>
+            </div>
+
+
+<!--
 <br/> <br/><br/><br/><br/>
 <div class="container">
   <div class="row pat-profile">
@@ -27,11 +102,11 @@
        <%=link_to "Following",{ :controller => "followers", :action => "new", :docid =>@doctor.id,:patient => params[:patid] },:class => "btn-appointment"%>
 
        <!--here is the isssue it goes to the index page-->
-     </div>
+     <!-- </div>
     </div>
   </div>
     <!--insert MAP here-->
-    <div class="col-md-3 col-md-push-1">
+    <!-- <div class="col-md-3 col-md-push-1">
       <div style='width: 800px;'>
         <div id="map" style='width: 400px; height: 160px;'></div>
       </div>
@@ -45,24 +120,27 @@
     <div class="row"><div class="col-md-2" id="prof-sub-heading"><div class="glyphicon glyphicon-education"></div>Education</div>
 
       <div class="col-md-6 sub-heading-detail">
-        <% if @doctor.degree.blank? %>
-          <p>Not mentioned his degrees yet</p>
-        <%else%> <!--see how can we make it ;ist-->
-          <%=@doctor.degree.degreeName%>
-        <%end%>
+          <% if @doctor.degrees.blank? %>
+            <p>Not mentioned his degrees yet</p>
+          <%else%> <!--see how can we make it ;ist-->
+              <!-- <% @doctor.degrees.each do |deg| %>
+            <%=deg.degreeName%>
+            <%end%>
+          <%end%>
       </div><hr>
 
     </div>
     <div class="row"><div class="col-md-2" id="prof-sub-heading"><div class="glyphicon glyphicon-paperclip"></div>Fee</div>
 
-      <div class="col-md-6 sub-heading-detail"><%=@doctor.profession.fee%></div>  <hr>
-    </div>
-    <div class="row"><div class="col-md-2 " id="prof-sub-heading"><div class="glyphicon glyphicon-thumbs-up"></div>Expertise</div>
+      <div class="col-md-6 sub-heading-detail"><% if @doctor.profession%><%=@doctor.profession.fee%><%else%><%='Not Given Yet'%><%end%></div>  <hr>
+  </div>
+      <div class="row"><div class="col-md-2 " id="prof-sub-heading"><div class="glyphicon glyphicon-thumbs-up"></div>Expertise</div>
 
-      <div class="col-md-6 sub-heading-detail"><%=@doctor.profession.spec%></div>  <hr>
+
+      <div class="col-md-6 sub-heading-detail"><% if @doctor.profession%><%=@doctor.profession.spec%><%else%><%='Not Given Yet'%><%end%></div>  <hr>
     </div>
     <div class="row">
     </div>
   </div>
 </div>
-</div>
+</div> -->

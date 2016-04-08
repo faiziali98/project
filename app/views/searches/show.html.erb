@@ -1,25 +1,24 @@
 <h1>
   Search Results
 </h1>
-<% patid = current_user %>
-<%=patid%>
 
 <% if @search.search_docs %>
+<%=@search.search_docs.inspect%>
+    <% @search.search_docs.each do |c| %>
+        <div class="search-results">
+        <div class="row"><div class="col-md-1"> <img class="doc-profile-pic img img-rounded" alt="pciture"></div>
+        <div class="col-md-9 search-heading"><%=c.name%>
+          <div class="row"><div class="search-details"><% if c.profession%><%=c.profession.spec%><%else%><%="Nothing"%><%end%></div></div>
+          <div class="row"><div class="search-details1"><% if c.profession%><%=c.profession.fee%><%else%><%="Nothing"%><%end%></div></div>
+
+          <%=link_to "Profile", :controller => "doctors", :action => "profile", :id =>c.id , :patid => @search.patient_id %>
+        </div>
+        </div>
+      </div>
+  <%end%>
+
+<% else %>
 <p>Sorry, we have no physician that match your criteria.  </p>
 <p>We are adding new Doctors daily, come back soon</p>
 
-<% else %>
-
-<% @search.search_docs.each do |c| %>
-  <div class="search-results">
-    <div class="row"><div class="col-md-1"> <img class="doc-profile-pic img img-rounded" alt="pciture"></div>
-    <div class="col-md-9 search-heading"><%=c.name%>
-      <div class="row"><div class="search-details"><%=c.profession.spec%></div></div>
-      <div class="row"><div class="search-details1"><%=c.profession.fee%></div></div>
-      <%=link_to "Profile", :controller => "doctors", :action => "profile", :id =>c.id , :patid => @search.patient_id %>
-    </div>
-    </div>
-  </div>
-
-<%end%>
 <%end%>

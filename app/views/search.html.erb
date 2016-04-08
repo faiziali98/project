@@ -16,25 +16,23 @@
                             <div class="about-info-p">
                                 <strong>Gender</strong>
                                 <br/>
-                                <%= f.text_field :sex,class: 'form-control text-muted' %>
+                                <%= f.text_field :gender,class: 'form-control text-muted' %>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="about-info-p">
                                 <strong>Area</strong>
                                 <br/>
-                                <%= f.text_field :address,class: 'form-control text-muted' %>
+                                <%= f.text_field :area,class: 'form-control text-muted' %>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="about-info-p">
                                 <strong>speciality</strong>
                                 <br/>
-                                <%= f.text_field :spec,class: 'form-control text-muted' %>
-                                <div><%= f.hidden_field :patient_id, :value =>@patient.id %></div>
+                                <%= f.text_field :speciality,class: 'form-control text-muted' %>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <%= f.submit "Search", class: "btn btn-edit" %>
                         </div>

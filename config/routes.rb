@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get 'patient/appointments/:id'=> 'appointments#show1'
   get '/discussion-form' =>'forums#show'
   get '/question/:id' => 'forums#search'
+  get 'forum/:id/:pid'=>'forums#search'
   resources :activities
   resources :appointments
   resources :users

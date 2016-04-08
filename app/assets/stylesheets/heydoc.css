@@ -21,6 +21,125 @@ h2.inner-tittle,h3.inner-tittle {
 .about-info-p strong{
   color:#333;
 }
+/*Discussion Forum*/
+th {
+   color: #00C6D7!important;
+   font-weight: 400;
+}
+.graph-visual.tables-main {
+    margin-bottom:3em;
+}
+.graph-visualization {
+  margin: 2em 0 0 0;
+
+}
+.graph{
+       background: #fff;
+    padding: 2em 2em;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -o-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border: 1px solid #E7E7E8;
+}
+.graph-visual {
+    margin-bottom: 2em;
+}
+.qtitle{
+    color:#777;
+}
+.qtitle:hover{
+    color: #00C6D7;
+}
+.btn-post{
+    background-color: #021F4E;
+    color:#fff;
+    margin-left: 1000px;
+}
+.btn-post:hover{
+    color:#021F4E;
+    background-color: #fff;
+}
+.Disc-question{
+    color:#021F4E;
+    font-weight: 700;
+    font-size: 22px;
+
+}
+.md-input{
+    width:400px;
+    height: 37px;
+    color:#000;
+    font-weight: 100px;
+    font-family: serif;
+}
+.comment-name{
+    font-size: 12px;
+    color: #000;
+}
+.comment-body{
+    font-size: 14px;
+    color: #000;
+    margin-top: 6px;
+}
+.comment-body span a{
+    font-size: 14px;
+    color: #021F4E;
+}
+.comments-part{
+    background-color: #F2F2F2;
+}
+/**/
+/*prfoile widget*/
+.profile-widget {
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid #00C6D7;
+        padding: 43px 0 24px 0;
+    background: #00C6D7;
+}
+.profile-widget img {
+    border-radius:50%;
+	 -o-border-radius:50%;
+	  -webkit-border-radius:50%;
+	   -moz-border-radius:50%;
+	       border: 4px solid #119BA7;
+}
+.profile-widget  h2{
+    margin: 7px 0;
+    color: #fff;
+    font-size: 21px;
+    font-weight: normal;
+}
+.profile-widget p{
+	    font-size: 14px;
+    color:#048590;
+}
+.button{
+    font-style: normal;
+       font-weight: 400;
+       position: relative;
+       display: block;
+       padding: 13px 20px;
+       color: #fff;
+       white-space: nowrap;
+       z-index: 2;
+       background-color: #021F4E;
+       font-size:0.9em;
+       font-family: 'Roboto', sans-serif;
+   	   border:none;
+   	    border-left: 4px solid #021F4E;
+        width:230px;
+
+}
+.button:hover{
+    color: #ffffff;
+    background-color:#002561;
+    transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+     border-left: 4px solid #00C6D7;
+
+}
 /*TABLE*/
 .thead-inverse{
     background-color: #31bc86;

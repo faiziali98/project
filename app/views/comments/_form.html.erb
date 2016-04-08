@@ -1,11 +1,12 @@
 
 <%=form_for([@forum,@forum.comments.build]) do |f| %>
   <p>
-    <%=f.text_area :body, :placeholder => "Comments goes here" %>
+      <div class="md-editor" id="1454925081632">
+        <%=f.text_area :body,:class=>"md-input" %>
     <%=f.hidden_field :patient_id , :value =>params[:patid]%>
   </p>
   <p>
-    <%=f.submit "Join Discussion"%>
+    <%=f.submit "Join Discussion",class:"btn btn-edit"%>
   </p>
   <p>
   </p>

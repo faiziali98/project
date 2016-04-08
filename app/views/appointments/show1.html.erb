@@ -1,86 +1,46 @@
-<div class="container">
-<div class="row cover-row">
-  <div class="col-md-2 userpic">
-    <%= image_tag("mypic.jpg", :alt => "rss feed",:class => "img-circle doc-pat-img1") %>
-  </div>
-  <br/><br/><br/><br/><br/><br/><br/>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-        24
-    </div>
-      <div class="user-headings">
-        Appointments
-      </div>
-  </div>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-      9
-    </div>
+<br/><br/><br/><br/><br/>
+              <%= render 'layouts/patbar'%>
+              <br/>
+                <div class="profile-section-inner">
+                    <div class="row">
+                        <div class="col-md-6 col-md-push-3 profile-info">
+                           <h3 class="inner-tittle">APPOINTMENTS</h3>
+                           <div class="main-grid3">
+                              <div class="p-20">
+                                  <table class="table">
+                                   <thead class="thead-inverse">
+                                     <tr>
 
-    <div class="user-headings">
-      Starred
-    </div>
+                                       <th>Patient Name</th>
+                                       <th>Contact No.</th>
+                                       <th>Appointment Time</th>
+                                       <th>Appointment Date</th>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                       <% @patient.appointments.each do |c| %>
+                                       <tr>
+                                           <td><% if c.doctor.name%>
+                                                    <%=c.doctor.name%>
+                                                 <%else%>
 
-  </div>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-      5
-    </div>
+                                                 <%end%>
+                                            </td>
+                                            <td><% if c.doctor.phone%>
+                                                     <%=c.doctor.phone%>
+                                                  <%else%>
+                                                  <%="No Contact Number Given"%>
+                                                  <%end%>
+                                             </td>
+                                           <td><%=c.apptime%></td>
+                                           <td><%=c.appdate%></td>
+                                     </tr>
+                                     <%end%>
+                                </tbody>
+                            </table>
 
-    <div class="user-headings">
-      Reviews
-    </div>
-
-  </div>
-  </div>
-</div>
-  <br/><br/><br/>
-<!--FIX THIS SHIT-->
-<div class="container">
-              <div class="row">
-                <div class="col-md-2 menu">
-                  <div class="menu-item">
-                    <a class="item">Reviews</a>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-
-                      <a class="item">Appointments</a>
+                        </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-                      <a class="item">Starred Doc</a>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-                      <a class="item">Logout</a>
-                    </div>
-                  </div>
                 </div>
-                <div class="col-md-10">
-                  <center>
-                    <div class="row heading-row1">Appointments</div><hr style="width:30%">
-                  </center>
-                  <% patid = current_user %>
-                  <%=patid%>
-                  <div class="row professional-row">
-                    <% @patient.appointments.each do |c| %>
-                    <div class="row"><div class="col-md-4" id="pro-label">Appointment Date</div><div class="col-md-8 pro-info"><%=c.appdate%></div></div>
-
-                    <div class="row"><div class="col-md-4" id="pro-label">Appointment Time:</div><div class="col-md-8 pro-info"><%=c.apptime%></div></div>
-                    <div class="row"><div class="col-md-4" id="pro-label">Doctor:</div><div class="col-md-8 pro-info"><% if c.doctor.name.nil?%>
-                                                                                                                                  <%else%>
-                                                                                                                                  <%=c.doctor.name%>
-                                                                                                                                  <%end%></div></div>
-                    <%=link_to "Add Review", :controller => "reviews", :action => "new", :patid => @patient.id , :docid =>c.doctor.id%>
-                    <hr style="width:100%">
-                    <!--<%=Time.now.utc%>
-                    <%=Time.now.strftime("%H:%M")%>
-                  -->
-                    <%end%>
-                   </div>
-                </div>
-              </div>
             </div>
+        </div>

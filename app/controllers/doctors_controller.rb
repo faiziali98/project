@@ -2,6 +2,7 @@ class DoctorsController < ApplicationController
   #shows the ProfessionsController
   def profile
     @doctor= Doctor.find(params[:id])
+
   end
   def show
   #shows all the doctors per id

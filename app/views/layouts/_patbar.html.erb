@@ -1,0 +1,26 @@
+<div class="sidebar-menu">
+  <br/><br/><br/>
+  <header class="logo">
+  <span id="logo"> <h1>HeyDoc</h1></span>
+  <!--<img id="logo" src="" alt="Logo"/>-->
+  </a>
+</header>
+<div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+<!--/down-->
+      <div class="down">
+            <%= image_tag("mypic.jpg", :alt => "rss feed",:class => "doc-pat-img") %>
+
+
+      </div>
+         <!--//down-->
+        <div class="menu">
+          <ul id="menu" >
+            <li><span><%=link_to "Dashboard", {:controller=>:patients,:action=>:show,:id=>@patient.id} %></span></li>
+            <li><span><%=link_to "Appointments",{:controller => "appointments", :action => "show1", :id => @patient.id} %></span></li>
+            <li><span><%=link_to "Search Doctors", :controller => "searches", :action => "new", :patid => @patient.id , :method => :post%></span></li>
+            <li><span><%=link_to "Reviews", :controller => "reviews", :action => "show", :id => @patient.id %></span></li>
+            <li><span><%=link_to "Discussion Forum", :controller => "forums", :action => "show", :patid => @patient.id %></span></li>
+
+          </ul>
+        </div>
+       </div>

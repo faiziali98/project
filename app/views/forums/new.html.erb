@@ -1,4 +1,43 @@
-<br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<%= render 'layouts/patbar'%>
+<br/><br/>
+   <div class="profile-widget">
+                <h2>Please Type your Question</h2>
+
+    </div>
+
+<div class="profile-section-inner">
+      <div class="col-md-8 col-md-push-3">
+          <h3 class="inner-tittle"></h3>
+          <div class="main-grid3">
+            <div class="p-20">
+            <%= form_for(@forum) do |f| %>
+                <div class="form-group">
+                    <div class="about-info-p">
+                        <strong>Question Title</strong>
+                        <br/>
+                        <%= f.text_field :title,class: 'form-control text-muted' %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="about-info-p">
+                        <strong>Question Body</strong>
+                        <br/>
+                        <%= f.text_area :body,class: 'form-control text-muted' %>
+                        <%=f.hidden_field :patient_id,:value =>params[:patid] %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%=f.submit "Post Question" ,class:"btn btn-edit"%>
+                </div>
+                <%end%>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <br/><br/><br/><br/><br/><br/><br/>
+
 <div class="container"><div class="row"><div class="class-md-4">
   <div class="form-group">
   <%= form_for (@forum) do |f| %>
@@ -10,4 +49,4 @@
     <%=f.submit "Post Question" %>
   <%end%>
 </div>
-</div></div></div>
+</div></div></div> -->
