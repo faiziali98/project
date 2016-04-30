@@ -1,6 +1,7 @@
 class Patient < ActiveRecord::Base
   include PublicActivity::Model
   tracked owner: ->(controller, model) { controller && controller.current_patuser }
+mount_uploader :image, ImageUploader
 has_many :doctors
 has_many :comments
 has_many :forums

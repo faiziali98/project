@@ -11,7 +11,7 @@
                         <div class="about-info-p">
                             <strong>Speciality</strong>
                             <br/>
-                            <%= f.text_field :spec,class: 'form-control text-muted' %>
+                            <%= f.select(:spec, options_for_select([['Audiologist','Audiologist'],['Allergist','Allergist'],['Anesthesiologist','Anesthesiologist'],['Cardiologist','Cardiologist'],[' Dentist',' Dentist'],[' Dermatologist',' Dermatologist'],['Gynecologist','Gynecologist'],['Immunologist','Immunologist'],['Neurologist','Neurologist'],['Neurosurgeon','Neurosurgeon'],['Oncologist','Oncologist'],['Orthopedic Surgeon','Orthopedic Surgeon'],['Physiologist','Physiologist'],['Psychiatrist','Psychiatrist'],[' Urologist',' Urologist']])) %>
                         </div>
                     </div>
                         <div class="form-group">
@@ -20,18 +20,18 @@
                                 <%= f.text_field :fee,class: 'form-control text-muted'  %>
                           </div>
                       </div>
-                        <div class="form-group">
-                            <div class="about-info-p">
-                                <strong>Office Hours Starting Time</strong>
-                                <%= f.text_field :offstart,class: 'form-control text-muted'  %>
+                      <div class="form-group">
+                          <div class="about-info-p">
+                              <strong>Office Hours Starting Time</strong> <br/>
+                              <%= f.select(:offstart, options_for_select([['12','12'],['13','13'],['14','14'],['15','15'],['16','16'],['17','17'],['18','18'],['19','19'],['20','20'],['21','21'],['22','22'],['23','23']]),class: 'form-control text-muted') %>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="about-info-p">
+                              <strong>Office Hours Ending Time</strong><br/>
+                              <%= f.select(:offend, options_for_select([['12','12'],['13','13'],['14','14'],['15','15'],['16','16'],['17','17'],['18','18'],['19','19'],['20','20'],['21','21'],['22','22'],['23','23']]),class: ' text-muted') %>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="about-info-p">
-                                <strong>Office Hours Ending Time</strong>
-                                <%= f.text_field :offend,class: 'form-control text-muted'  %>
-                            </div>
-                        </div>
+                      </div>
                         <div class="form-group">
                             <div class="about-info-p">
                                 <strong>Office Address</strong>

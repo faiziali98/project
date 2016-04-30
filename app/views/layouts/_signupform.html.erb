@@ -1,0 +1,31 @@
+<div class="form-group">
+    <strong>Name</strong>
+        <%= f.text_field :name,class: 'form-control' %>
+        </div>
+        <div class="form-group">
+            <strong>Email</strong>
+            <%= f.text_field :email,class: 'form-control'  %>
+        </div>
+        <div class="form-group">
+            <strong>Gender</strong>
+            <%= f.select(:sex, options_for_select([['Male','Male'],['Female','Female']]),class: 'form-control') %>
+        </div>
+        <div class="form-group">
+            <strong>Contact Number</strong>
+            <%= f.text_field :phone,class: 'form-control'  %>
+        </div>
+        <div class="form-group">
+            <strong>Password</strong>
+            <%= f.password_field :password,class: 'form-control' %>
+        </div>
+        <div class="form-group">
+            <strong>Confirm Password</strong>
+            <%= f.password_field  :password_confirmation,class: 'form-control' %>
+        </div>
+      <div class="form-group">
+          <strong>Profile Picture</strong>
+           <%= f.file_field :image,class: 'form-control'%>
+      </div>
+    <div class="form-group">
+        <%= f.submit "Sign Up", class: "btn btn-signin" %>
+    </div>

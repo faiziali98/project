@@ -1,16 +1,16 @@
+<br/><br/><br/>
+<center>
 <h1>
   Search Results
 </h1>
-
+</center>
 <% if @search.search_docs %>
-<%=@search.search_docs.inspect%>
     <% @search.search_docs.each do |c| %>
         <div class="search-results">
-        <div class="row"><div class="col-md-1"> <img class="doc-profile-pic img img-rounded" alt="pciture"></div>
+        <div class="row"><div class="col-md-1"> <%= image_tag c.image_url().to_s, :class => "doc-profile-pic img img-rounded" %></div>
         <div class="col-md-9 search-heading"><%=c.name%>
           <div class="row"><div class="search-details"><% if c.profession%><%=c.profession.spec%><%else%><%="Nothing"%><%end%></div></div>
-          <div class="row"><div class="search-details1"><% if c.profession%><%=c.profession.fee%><%else%><%="Nothing"%><%end%></div></div>
-
+          <div class="row"><div class="search-details1"><% if c.profession%><%=c.profession.fee + " PKR"%><%else%><%="Nothing"%><%end%></div></div>
           <%=link_to "Profile", :controller => "doctors", :action => "profile", :id =>c.id , :patid => @search.patient_id %>
         </div>
         </div>

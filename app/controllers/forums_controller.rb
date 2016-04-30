@@ -32,8 +32,8 @@ class ForumsController < ApplicationController
   def search
     @patient =Patient.find(params[:patid])
     @forum = Forum.find(params[:id])
-
   end
+
   private
     def forum_params
       params.require(:forum).permit(:title,:body,:patient_id)

@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'patient_sessions#destroy'
 
 
-  get  'doctor' => 'doctors#show'
+  get  'doctor/:id' => 'doctors#show'
   get 'doctor/personal' => 'doctors#show1'
   get 'patient/search_doc' => 'patients#search'
   get 'patprof' => 'doctors#profile'

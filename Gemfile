@@ -19,6 +19,8 @@ gem 'simple_form'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'rake','11.0.1'
+gem 'carrierwave'
+gem 'geocoder'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

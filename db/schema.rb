@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160407220444) do
+ActiveRecord::Schema.define(version: 20160429183626) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20160407220444) do
     t.integer  "patient_id"
     t.date     "appdate"
     t.time     "apptime"
+    t.string   "appointtime"
   end
 
   create_table "comments", force: true do |t|
@@ -105,6 +106,15 @@ ActiveRecord::Schema.define(version: 20160407220444) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string   "image"
   end
 
   create_table "dprofessions", force: true do |t|
@@ -166,6 +176,7 @@ ActiveRecord::Schema.define(version: 20160407220444) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
+    t.string   "image"
   end
 
   create_table "professions", force: true do |t|

@@ -1,13 +1,8 @@
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
- <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
- <%= csrf_meta_tags %>
-
 <div class="row heading-row">
   <center><h1>Please SignUp</h1><hr style="width:30%;"> </center>
 </div>
 <div class="left-side">
   <!--Half of the page -->
 </div>
-
-<%=link_to "I am doctor", :controller => "sessions", :action => "new"%>
-<%=link_to "I am Patient", :controller => "sessions", :action => "profile" %>
+  <%=link_to "I am doctor", {:controller => "doctor_sessions", :action => "new"},:class => "heading-row"%>
+  <%=link_to "I am Patient", {:controller => "patient_sessions", :action => "new"}, :class => "heading-row" %>

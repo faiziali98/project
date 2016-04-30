@@ -16,7 +16,7 @@
                             <div class="about-info-p">
                                 <strong>Gender</strong>
                                 <br/>
-                                <%= f.text_field :sex,class: 'form-control text-muted' %>
+                                <%= f.select(:sex, options_for_select([['',''],['Male','Male'],['Female','Female']]),class: 'form-control') %>
                             </div>
                         </div>
                         <div class="form-group">
@@ -30,7 +30,8 @@
                             <div class="about-info-p">
                                 <strong>speciality</strong>
                                 <br/>
-                                <%= f.text_field :spec,class: 'form-control text-muted' %>
+                                <%= f.select(:spec, options_for_select([['',''],['Audiologist','Audiologist'],['Allergist','Allergist'],['Anesthesiologist','Anesthesiologist'],['Cardiologist','Cardiologist'],[' Dentist',' Dentist'],[' Dermatologist',' Dermatologist'],['Gynecologist','Gynecologist'],['Immunologist','Immunologist'],['Neurologist','Neurologist'],['Neurosurgeon','Neurosurgeon'],['Oncologist','Oncologist'],['Orthopedic Surgeon','Orthopedic Surgeon'],['Physiologist','Physiologist'],['Psychiatrist','Psychiatrist'],[' Urologist',' Urologist']])) %>
+
                                 <div><%= f.hidden_field :patient_id, :value =>@patient.id %></div>
                             </div>
                         </div>

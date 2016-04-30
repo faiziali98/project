@@ -38,38 +38,38 @@
 </div>
 <!-- This is the personal info section -->
 <div class="profile-section-inner">
-      <div class="col-md-6 col-md-push-3 profile-info">
-     <h3 class="inner-tittle">Personal Information </h3>
-     <div class="main-grid3">
-        <div class="p-20">
-            <% @doctor.degrees.each do |c| %>
-            <div class="about-info-p">
-                <div class="glyphicon glyphicon-education" style="color:#002561;"></div><strong>Qualifications</strong>
-                <br>
-                <div class="text-muted"><% if ((@doctor.degrees) && (c.degreeName))%><%adder=true%><%=c.degreeName%><%=" "%><%else%><%="Please Add University Name"%><%end%></p>
+    <div class="col-md-6 col-md-push-3 profile-info">
+        <h3 class="inner-tittle">Personal Information </h3>
+        <div class="main-grid3">
+            <div class="p-20">
+                <% @doctor.degrees.each do |c| %>
+                <div class="about-info-p">
+                    <div class="glyphicon glyphicon-education" style="color:#002561;"></div><strong>Qualifications</strong>
+                    <br>
+                    <div class="text-muted"><% if ((@doctor.degrees) && (c.degreeName))%><%adder=true%><%=c.degreeName%><%=" "%><%else%><%="Please Add University Name"%><%end%></p>
+                  </div>
               </div>
-          </div>
-            <%end%>
-            <div class="about-info-p">
-              <strong>Speciality</strong>
-              <br>
-              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.spec))%><%=@doctor.profession.spec%><%else%><%="Will be Available Soon"%><%end%></p>
-            </div>
-            <div class="about-info-p">
-              <strong>Fee</strong>
-              <br>
-              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.fee))%><%=@doctor.profession.fee%><%else%><%="Will be Available Soon"%><%end%> PKR</p>
-            </div>
-            <div class="about-info-p">
-              <strong>Office Timings</strong>
-              <br>
-              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.offstart) &&(@doctor.profession.offend))%><%=@doctor.profession.offstart%><%="-"%><%=@doctor.profession.offstart%>(24-hour format)<%else%><%="Will be Available Soon"%><%end%></p>
-            </div>
-            <div class="about-info-p m-b-0">
-              <strong>Office Address</strong>
-              <br>
-              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.address))%><%=@doctor.profession.address%><%else%><%="Will be Available Soon"%><%end%></p>
-            </div>
+                <%end%>
+                <div class="about-info-p">
+                  <strong>Speciality</strong>
+                  <br>
+                  <p class="text-muted"><% if ((@doctor) && (@doctor.profession))%><%=@doctor.profession.spec%><%else%><%="Will be Available Soon"%><%end%></p>
+                </div>
+                <div class="about-info-p">
+                  <strong>Fee</strong>
+                  <br>
+                  <p class="text-muted"><% if ((@doctor) && (@doctor.profession))%><%=@doctor.profession.fee%><%else%><%="Will be Available Soon"%><%end%> PKR</p>
+                </div>
+                <div class="about-info-p">
+                  <strong>Office Timings</strong>
+                  <br>
+                  <p class="text-muted"><% if ((@doctor) && (@doctor.profession) &&(@doctor.profession.offend))%><%=@doctor.profession.offstart%><%="-"%><%=@doctor.profession.offend%>(24-hour format)<%else%><%="Will be Available Soon"%><%end%></p>
+                </div>
+                <div class="about-info-p m-b-0">
+                  <strong>Office Address</strong>
+                  <br>
+                  <p class="text-muted"><% if ((@doctor) && (@doctor.profession))%><%=@doctor.profession.address%><%else%><%="Will be Available Soon"%><%end%></p>
+                </div>
 
 
 <!--

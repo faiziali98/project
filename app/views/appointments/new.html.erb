@@ -1,9 +1,9 @@
 
 <br/><br/><br/><br/><br/>
-<%= simple_form_for @appointment,:url =>{ :controller => :appointments, :action => :create, :docid =>@doctor.id , :patient =>@patient.id } do |f| %>
-  <%= f.input :appdate %>
+<%= form_for @appointment,:url =>{ :controller => :appointments, :action => :create, :docid =>@doctor.id , :patient =>@patient.id } do |f| %>
+  <%= f.date_field :appdate%>
 
   <%= f.hidden_field :patient_id, :value => @patient.id%>
-  <%= f.input :apptime %>
+  <%= select("appointment", "appointtime",@slots.collect {|p| [p, p] }) %>
   <%= f.button :submit , :class=>"btn btn-edit" %>
 <% end %>
