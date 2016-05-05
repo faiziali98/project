@@ -22,7 +22,7 @@ gem 'launchy'
 gem 'rspec-rails'
 gem 'simplecov'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 gem 'rake','11.0.1'
 gem 'carrierwave'
 gem 'geocoder'
@@ -59,7 +59,13 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+group :development do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
