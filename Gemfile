@@ -7,7 +7,7 @@ gem 'minitest-reporters'
 gem 'mini_backtrace'
 gem 'guard'
 gem 'public_activity'
-gem 'vider', github: 'wazery/vider'
+
 gem 'bootstrap-generators', '~> 3.3.4'
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-sass','3.2.0.0'
@@ -32,7 +32,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-gem 'videojs_rails'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 group :test do
