@@ -20,6 +20,5 @@
 //= css3clock
 //= require jquery.vide
 //= require bootstrap
-//= require Underscore
 //= require gmaps/google
 //= require video
