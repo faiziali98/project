@@ -51,44 +51,6 @@ ActiveRecord::Schema.define(version: 20160429183626) do
     t.integer  "forum_id"
   end
 
-  create_table "d_certs", force: true do |t|
-    t.string   "name"
-    t.string   "cert1"
-    t.string   "cert2"
-    t.string   "cert3"
-    t.string   "cert4"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "dappointments", force: true do |t|
-    t.string   "name"
-    t.string   "pat1"
-    t.string   "pat2"
-    t.string   "pat3"
-    t.string   "pat4"
-    t.string   "pat5"
-    t.string   "pat6"
-    t.string   "pat7"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "dbasics", force: true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.integer  "age"
-    t.string   "degree1"
-    t.string   "uni1"
-    t.string   "degree2"
-    t.string   "uni2"
-    t.string   "uni3"
-    t.string   "degree3"
-    t.string   "phone"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "degrees", force: true do |t|
     t.string   "uniName"
     t.string   "degreeName"
@@ -117,27 +79,6 @@ ActiveRecord::Schema.define(version: 20160429183626) do
     t.string   "image"
   end
 
-  create_table "dprofessions", force: true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.string   "startoff"
-    t.string   "endoff"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "educations", force: true do |t|
-    t.string   "deg1"
-    t.string   "deg2"
-    t.string   "deg3"
-    t.string   "uni1"
-    t.string   "uni2"
-    t.string   "uni3"
-    t.integer  "doctor_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "followers", force: true do |t|
     t.integer  "doctor_id"
     t.integer  "patient_id"
@@ -152,19 +93,6 @@ ActiveRecord::Schema.define(version: 20160429183626) do
     t.datetime "updated_at"
     t.integer  "patient_id"
     t.integer  "forum_id"
-  end
-
-  create_table "pappointments", force: true do |t|
-    t.string   "name"
-    t.string   "doc1"
-    t.string   "doc2"
-    t.string   "doc3"
-    t.string   "doc4"
-    t.string   "doc5"
-    t.string   "doc6"
-    t.string   "doc7"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "patients", force: true do |t|
@@ -204,8 +132,8 @@ ActiveRecord::Schema.define(version: 20160429183626) do
   create_table "searches", force: true do |t|
     t.string   "name"
     t.string   "address"
-    t.string   "sex"
-    t.string   "spec"
+    t.string   "gender"
+    t.string   "speciality"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "patient_id"

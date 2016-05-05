@@ -1,4 +1,310 @@
+/*Comment Image*/
+.comment-image {
+  width: 60px;
+  height: 50px;
+}
 
+/*FOOTER*/
+.footer{
+  padding-bottom: 2em;
+  border-top: 1.5px solid #eee;
+  padding: 2em 0;
+  background-color: #242424;
+}
+.ftr_navi ul li{
+	display:block;
+}
+.ftr_navi ul li a{
+	display:block;
+	padding:5px 0;
+	color: #848484;
+	font-size: .95em;
+}
+.ftr_navi ul li a:hover,.get_in_touch a:hover,.ftr-logo p a:hover{
+	text-decoration:none;
+	color:#fff;
+}
+.ftr-logo p{
+	margin-top:1em;
+	color: #848484;
+	line-height:1.8em;
+	  font-size: 0.95em;
+}
+.ftr-logo p a{
+	color: #848484;
+}
+.copywrite{
+	float:left;
+}
+.ftr{
+	margin-top:0em;
+	padding:0;
+}
+.ftr_navi.ftr ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ftr-logo {
+  margin-top: 7em;
+}
+.get_in_touch h3,.ftr_navi h3{
+	  letter-spacing: 2px;
+	  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 1em;
+    color: #fff;
+}
+.get_in_touch p {
+  color: #848484;
+  font-size: .95em;
+    padding: 0px 0;
+}
+.get_in_touch a {
+  color: #848484;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+/*=== about ==*/
+/*
+New home page
+*/
+.top-nav ul li a{
+	  background: #1fadc5;
+	float: none;
+	display: inline-block;
+	  padding: 42px 47.6px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  color: #32332e;
+  font-size: 0.875em;
+  transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+    border-left: 1px solid #fff;
+  margin: 0 -1px;
+  text-decoration:none;
+  font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+}
+.top-nav li.active> a, .top-nav li> a:hover {
+	color: #FFF;
+	background:#ff8000;
+	font-weight: 900;
+	  font-family: 'Roboto', sans-serif;
+	  letter-spacing: 2px;
+}
+.top-nav{
+	float:right;
+	  background: #FEB070;
+}
+.main-header {
+	  margin-top: 16px;
+	  background: #fff;
+	  height: 100px;
+}
+ul.support li, ul.support-right li {
+  display: inline-block;
+  margin: 1em 0 0em 0.8em;
+}
+ul.support li a, ul.support li span, ul.support-right li a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #898989;
+    vertical-align: bottom;
+}
+ul.support li i, ul.support-right li i {
+  /*background: url(../images/msg.png) 0px 0px;*/
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 6px 0 0;
+}
+ul.support li i.tele-in{
+	  /*background: url(../images/call.png) 0px 0px;*/
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 4px 0 0;
+}
+
+.top-header-contact-info span {
+	  font-size: 1.5em;
+	}
+	.top-header-contact-info p {
+	  font-size: 0.83em;
+	}
+	.top-header-contact-account {
+	    width: 51%;
+	}
+	.top-header {
+	  margin-bottom: 0em;
+	}
+	.navigation {
+	  margin-top: 1em;
+	}
+.navbar {
+  border-radius: 0 !important;
+}
+.logo{
+float: left;
+   margin-top: 2.2em;
+}
+.logo a{
+display:block;
+}
+.nav-wil{
+padding:0;
+}
+.navbar-default .navbar-nav > li > a{
+background: none;
+  color: #AEAEAE;
+  font-size: 21px;
+  font-weight: 100;
+}
+.nav > li > a {
+  padding: 17px 17px !important;
+}
+.navbar-nav {
+  float: left;
+  margin: 0;
+    padding: 0px 0px;
+}
+/*
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #FFF;
+  background: #00598e;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #FFF;
+  background: #81ceff;
+}
+*/
+.navbar-default {
+  background-color: #fff !important;
+  padding: 0em 0!important;
+  color: #fff;
+  border-bottom: 1px solid #E0E0E0  !important;
+  border-right: 1px solid#E0E0E0 ;
+}
+.top-header {
+  margin-bottom: 1em;
+}
+.banner-grids {
+position: absolute;
+  bottom: 0;
+  z-index: 9999;
+  right: 13%;
+}
+.banner-grids h3 {
+	  font-family: 'Roboto';
+  text-transform: uppercase;
+  padding: 10px 0;
+    font-weight: 600;
+}
+.banner-grids p {
+  font-size: 0.95em;
+  line-height: 1.7em;
+  font-weight: 100;
+}
+.banner-grid4 ul li {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 1.8em;
+  font-weight: 100;
+}
+.banner-grid4 ul li span {
+  padding-left: 75px;
+}
+.banner-grid1 {
+  background: #81ceff;
+  float: left;
+  width: 25%;
+    padding: 1.5em;
+      color: #fff;
+}
+.banner-grid2 {
+  background: #44A7E4;
+  float: left;
+  width: 25%;
+    padding: 1.5em;
+      color: #fff;
+}
+.banner-grid3 {
+  background: #0077c0;
+  float: left;
+  width: 25%;
+    padding: 1.5em;
+      color: #fff;
+}
+.banner-grid4 ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.banner-grid4 {
+  background: #00598e;
+  float: left;
+  width: 25%;
+  padding: 1.38em;
+  color: #fff;
+    height: 216px;
+}
+
+.navbar-default .navbar-nav > li > a{
+background: none;
+  color: #AEAEAE;
+  font-size: 21px;
+  font-weight: 100;
+}
+.nav > li > a {
+  padding: 17px 17px !important;
+}
+.navbar-nav {
+  float: left;
+  margin: 0;
+    padding: 0px 0px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #FFF;
+  background: #00598e;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #FFF;
+  background: #81ceff;
+}
+.navbar-default {
+  background-color: #fff !important;
+  padding: 0em 0!important;
+  color: #999;
+  border: 1px solid #E0E0E0  !important;
+  border-right: 1px solid#E0E0E0 ;
+}
+.top-header {
+  margin-bottom: 1em;
+}
+
+/*
+This is the separator page styling
+*/
+.signinpage p {
+  font-family: helvetica;
+  font-size: 16px;
+  
+  color:#000;
+}
+.signinpage h3 {
+  padding-top:1.5em;
+}
+.selectors {
+
+}
 
 h1, h2, h3, h4, h5 {
     	font-family: 'Roboto', sans-serif;
@@ -23,7 +329,7 @@ h2.inner-tittle,h3.inner-tittle {
 }
 /*Discussion Forum*/
 th {
-   color: #00C6D7!important;
+   color: #fff!important;
    font-weight: 400;
 }
 .graph-visual.tables-main {
@@ -487,13 +793,13 @@ span h1{
   color: #00C6D7;
 }
 .error_page {
-       background: #00C6D7;
+       background: #fff;
     position: relative;
     padding: 11em 0;
     width: 100%
 }
 .error_page1 {
-       background: #00C6D7;
+       background: #fff;
     position: relative;
     padding: 4em 0;
     width: 100%
@@ -523,7 +829,7 @@ span h1{
 }
 .error-top h3 i{
     font-size: 113px;
-    color: #00c6d7;
+    color: #fff;
 }
 .error-top span {
   font-size: 1.5em;
@@ -802,16 +1108,19 @@ head sepaator page which separates doctors from patients
 }
 /*end*/
 
+#doctor_sex {
+  width : 100px;
+}
 /* DEGREE STYLING  */
 .degree-box{
-  border: 3px solid ##2c3e50;
+  border: 3px solid #2c3e50;
 }
 /*ENDED*/
 .cover-row{
   height:300px;
   width:100%;
   background-color:#2c3e50;
-  background-image: ;
+  
   padding-bottom: 110px;
 }
 .user-blocks{
@@ -832,7 +1141,7 @@ head sepaator page which separates doctors from patients
   height: 300px;
 }
 .review-col{
-  background-color:;
+  
   border-left: 1px solid #fff;
 }
 .doc-name{
@@ -853,7 +1162,7 @@ head sepaator page which separates doctors from patients
   color:#fff;
   font-weight: 400;
   border-top: 1px solid #fff;
-  border-bottom: : 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 .user-blocks .user-headings{
   font-size: 25px;
@@ -1009,7 +1318,7 @@ p {
 
 
 a {
-    color: #fff;
+    color: #999;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -1018,7 +1327,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
+    /*color: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
 }
 
 .light {
@@ -1202,8 +1511,11 @@ blockquote span{
 
 
 .nav-list li a :hover{
-color:rgba(254,82,76, .8);
-background: rgba(254,82,76, .9); /* Primary color, can be changed via colors.css */
+/*color:rgba(254,82,76, .8);*/
+ /*color:#000;*/
+/*
+background: rgba(254,82,76, .9); /* Primary color, can be changed via colors.css 
+*/
 }
 
 
@@ -1378,7 +1690,7 @@ background: rgba(254,82,76, .9); /* Primary color, can be changed via colors.css
     linear-gradient(
       rgba(255, 0, 0, 0.25),
       rgba(255, 0, 0, 0.25)
-    ),
+    )
   }
 #sel1{
   margin-top:0.5em;
@@ -1418,7 +1730,7 @@ background: rgba(254,82,76, .9); /* Primary color, can be changed via colors.css
   height: 300px;
 }
 .mynav{
-  background-color:#3598db;
+  background-color:#e7e7e7;
 }
 .teamrow{
   padding-top:65px;
@@ -1439,7 +1751,7 @@ background: rgba(254,82,76, .9); /* Primary color, can be changed via colors.css
   background-color:#f2f2f2;
   color :rgba(254,82,76, 1);
   font-weight: bold;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 14px;
@@ -1685,7 +1997,6 @@ footer .social a{
 }
 .social-icons{
   color:rgba(254,82,76, 1);
-  padding-top: ;
   padding-bottom: 15px;
   padding-left: 90px;
 }
@@ -2033,14 +2344,14 @@ footer .social a{
     text-shadow: none;
     background: #fcfcfc;
     color: #fff;
-    background: rgba(254,82,76, .8);
+    /*background: rgba(254,82,76, .8);*/
 }
 
 ::selection {
     text-shadow: none;
     background: #fcfcfc;
     color: #fff;
-    background: rgba(254,82,76, .8);
+    /*background: rgba(254,82,76, .8);*/
 }
 
 img::selection {
@@ -2060,6 +2371,6 @@ body {
 /* Debug styles (remove before exporting for production)
 /* ---------------------------------------------- */
 
-.debug{
-    border:1px solid #f00;
-}
+/*.debug{*/
+/*    border:1px solid #f00;*/
+/*}*/

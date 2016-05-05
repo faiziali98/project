@@ -1,7 +1,10 @@
+
+<%= render 'layouts/patbar'%>
+<br/><br/><br/><br/><br/>
 <div class="row">
     <div class="profile-section-inner">
           <div class="col-md-7 col-md-push-3 profile-info">
-            <h3 class="inner-tittle">Search Doctors from Anywhere </h3>
+            <h3 class="inner-tittle" style="color:#021F4E"><strong>Search Doctors from Anywhere </strong></h3>
             <div class="main-grid3">
                 <div class="p-20">
                     <%= form_for (@search) do |f| %>
@@ -16,7 +19,7 @@
                             <div class="about-info-p">
                                 <strong>Gender</strong>
                                 <br/>
-                                <%= f.select(:sex, options_for_select([['',''],['Male','Male'],['Female','Female']]),class: 'form-control') %>
+                                <%= f.select(:gender, options_for_select([['',''],['Male','Male'],['Female','Female']]),class: 'form-control') %>
                             </div>
                         </div>
                         <div class="form-group">
@@ -30,7 +33,7 @@
                             <div class="about-info-p">
                                 <strong>speciality</strong>
                                 <br/>
-                                <%= f.select(:spec, options_for_select([['',''],['Audiologist','Audiologist'],['Allergist','Allergist'],['Anesthesiologist','Anesthesiologist'],['Cardiologist','Cardiologist'],[' Dentist',' Dentist'],[' Dermatologist',' Dermatologist'],['Gynecologist','Gynecologist'],['Immunologist','Immunologist'],['Neurologist','Neurologist'],['Neurosurgeon','Neurosurgeon'],['Oncologist','Oncologist'],['Orthopedic Surgeon','Orthopedic Surgeon'],['Physiologist','Physiologist'],['Psychiatrist','Psychiatrist'],[' Urologist',' Urologist']])) %>
+                                <%= f.select(:speciality, options_for_select([['',''],['Audiologist','Audiologist'],['Allergist','Allergist'],['Anesthesiologist','Anesthesiologist'],['Cardiologist','Cardiologist'],[' Dentist',' Dentist'],[' Dermatologist',' Dermatologist'],['Gynecologist','Gynecologist'],['Immunologist','Immunologist'],['Neurologist','Neurologist'],['Neurosurgeon','Neurosurgeon'],['Oncologist','Oncologist'],['Orthopedic Surgeon','Orthopedic Surgeon'],['Physiologist','Physiologist'],['Psychiatrist','Psychiatrist'],[' Urologist',' Urologist']])) %>
 
                                 <div><%= f.hidden_field :patient_id, :value =>@patient.id %></div>
                             </div>

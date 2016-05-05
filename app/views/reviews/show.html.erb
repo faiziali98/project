@@ -2,7 +2,7 @@
 <%= render 'layouts/patbar'%>
 <div class="profile-section-inner">
       <div class="col-md-6 col-md-push-3 profile-info">
-     <h3 class="inner-tittle">Reviews </h3>
+     <h3 class="inner-tittle" style="color:#021F4E"><strong>Reviews </strong> </h3>
      <div class="main-grid3">
      <% @patient.reviews.each do |c| %>
         <div class="p-20">
@@ -34,41 +34,5 @@
           <hr>
           <%end%>
           <%end%>
-                <!-- <div class="col-md-10">
-                  <center>
-                    <div class="row heading-row1">Appointments</div><hr style="width:30%">
-                  </center>
-                  <% patid = current_user %>
-                  <%=patid%>
-                  <div class="row professional-row">
-                    <% @patient.reviews.each do |c| %>
-                    <div class="row"><div class="col-md-4" id="pro-label">Doctor Name:</div><div class="col-md-8 pro-info"><% if c && c.doctor%>
-                                                                                                                                <%=c.doctor.name%>
-                                                                                                                            <%else%>
-
-                                                                                                                                  <%end%></div></div>
-
-                    <div class="row"><div class="col-md-4" id="pro-label">Waiting Time:</div><div class="col-md-8 pro-info"><% if c.waitTime.nil?%>
-                                                                                                                              <%="Not mentioned yet"%>
-                                                                                                                                  <%else%>
-                                                                                                                                  <%=c.waitTime%>
-                                                                                                                                  <%end%></div></div>
-                    <div class="row"><div class="col-md-4" id="pro-label">Overall Rating:</div><div class="col-md-8 pro-info"><% if c.overallRating.nil?%>
-                                                                                                                            <%="Not mentioned yet"%>
-                                                                                                                                  <%else%>
-                                                                                                                                  <%=c.overallRating%>
-                                                                                                                                  <%end%></div></div>
-                    <div class="row"><div class="col-md-4" id="pro-label">Beside Manner:</div><div class="col-md-8 pro-info"><% if c.besideManner.nil?%>
-                                                                                                                                                                                                                                          <%="Not mentioned yet"%>
-                                                                                                                                                                                                                                                <%else%>
-                                                                                                                                                                                                                                                <%=c.besideManner%>
-                                                                                                                                                                                                                                                <%end%></div></div>
-                    <hr style="width:100%">
-                    <!--<%=Time.now.utc%>
-                    <%=Time.now.strftime("%H:%M")%>
-                  -->
-                    <!-- <%end%>
-                   </div>
-                </div>
-              </div>
-            </div> -->
+          </div>
+         </div>

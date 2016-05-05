@@ -1,16 +1,28 @@
 Rails.application.routes.draw do
-
+  root 'static_pages#Home'
   get 'appointments/new'
-
+  
   get 'sessions/new'
   get 'users/index'
   get 'users/show'
   get 'users/new'
   get 'static_pages/Home'
+  get 'static_pages/Home2'
   get 'static_pages/Services'
   get 'static_pages/Contact'
   get 'static_pages/SignIn'
   get 'static_pages/separator'
+  get 'static_pages/Home'
+  
+  get 'comments/index'
+  get 'comments/update'
+  get 'comments/show'
+  get 'comments/edit'
+  get 'comments/destroy'
+  
+  get 'appointments/new'
+  get 'appointments/show1'
+  get 'appointments/show'
 
 
   get    'login/doc'   => 'doctor_sessions#new'
@@ -30,6 +42,7 @@ Rails.application.routes.draw do
   get '/discussion-form' =>'forums#show'
   get '/question/:id' => 'forums#search'
   get 'forum/:id/:pid'=>'forums#search'
+  get 'docreviews/:did' => 'reviews#show1'
   resources :activities
   resources :appointments
   resources :users
@@ -41,6 +54,6 @@ Rails.application.routes.draw do
   resources :reviews
   resources :followers
   resources :forums do
-    resources :comments
+  resources :comments
   end
 end

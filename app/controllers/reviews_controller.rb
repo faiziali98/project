@@ -6,8 +6,8 @@ class ReviewsController < ApplicationController
     @patient = Patient.find(params[:review][:patient_id])
 
     @review = @doctor.reviews.build(review_params)
-    @patreview =@patient.reviews.create(review_params)
-    if @patreview.save && @review.save
+    # @patreview =@patient.reviews.create(review_params)
+    if @review.save
       redirect_to(controller: 'appointments',action: 'show1' ,:id => @patient.id, :docid => @doctor.id )
     else
       redirect_to static_pages_Home_path
@@ -29,7 +29,7 @@ class ReviewsController < ApplicationController
     @reviews = @patient.reviews
   end
   def show1
-    @doctor = Patient.find(params[:id])
+    @doctor = Doctor.find(params[:did])
     @reviews = @doctor.reviews
   end
   private

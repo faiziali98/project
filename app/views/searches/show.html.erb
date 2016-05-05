@@ -1,4 +1,6 @@
 <br/><br/><br/>
+
+<div class = "container" style = "background-color:#fff;">
 <center>
 <h1>
   Search Results
@@ -6,12 +8,13 @@
 </center>
 <% if @search.search_docs %>
     <% @search.search_docs.each do |c| %>
-        <div class="search-results">
+        <div class="search-results" style= "background-color:#fff;">
         <div class="row"><div class="col-md-1"> <%= image_tag c.image_url().to_s, :class => "doc-profile-pic img img-rounded" %></div>
-        <div class="col-md-9 search-heading"><%=c.name%>
+        
+        <div class="col-md-9 search-heading" ><%=c.name%> 
           <div class="row"><div class="search-details"><% if c.profession%><%=c.profession.spec%><%else%><%="Nothing"%><%end%></div></div>
-          <div class="row"><div class="search-details1"><% if c.profession%><%=c.profession.fee + " PKR"%><%else%><%="Nothing"%><%end%></div></div>
-          <%=link_to "Profile", :controller => "doctors", :action => "profile", :id =>c.id , :patid => @search.patient_id %>
+          <div class="row"><div class="search-details1"><% if c.profession%><%=c.profession.fee + " PKR"%><%else%><%="Nothing"%><%end%></div></div> <br/>
+          <%=link_to "View Profile", {:controller => "doctors", :action => "profile", :id =>c.id , :patid => @search.patient_id } , :class => "btn btn-rounded btn-primary", :style => "font-size:16px;" %>
         </div>
         </div>
       </div>
@@ -22,3 +25,4 @@
 <p>We are adding new Doctors daily, come back soon</p>
 
 <%end%>
+</div>

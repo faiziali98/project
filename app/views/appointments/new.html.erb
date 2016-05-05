@@ -1,9 +1,27 @@
 
 <br/><br/><br/><br/><br/>
+<%= render 'layouts/patbar'%>
+<div class="container">
+  <div class="profile-section-inner">
+      <div class="col-md-6 col-md-push-3 profile-info">
+     <h3 class="inner-tittle" style="color:#021F4E"><strong>Please Fill in the Form </strong> </h3>
+  
 <%= form_for @appointment,:url =>{ :controller => :appointments, :action => :create, :docid =>@doctor.id , :patient =>@patient.id } do |f| %>
+  <div class="form-group">
+    <strong>Appointment Date</strong><br/>
+    <br/>
   <%= f.date_field :appdate%>
-
+  </div>
+  
   <%= f.hidden_field :patient_id, :value => @patient.id%>
+  <div class="form-group">
+    <strong>Appointment Time</strong> <br/>
+    <br/>
   <%= select("appointment", "appointtime",@slots.collect {|p| [p, p] }) %>
+  </div>
+  <div class="form-group">
   <%= f.button :submit , :class=>"btn btn-edit" %>
+  </div>
 <% end %>
+</div>
+</div>

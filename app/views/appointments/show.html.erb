@@ -21,11 +21,13 @@
                                        <% @doctor.appointments.each do |c| %>
                                        <tr>
                                            <td><% if c.patient.name%>
+                                                  <%=c.patient.name%>
                                                  <%else%>
                                                  <%=c.patient.name%>
                                                  <%end%>
                                             </td>
                                             <td><% if c.patient.phone%>
+                                                    <%=c.patient.phone%>
                                                   <%else%>
                                                   <%=c.patient.phone%>
                                                   <%end%>
@@ -44,24 +46,3 @@
                   <%= render 'layouts/clock'%>
               </div> -->
           </div>
-
-
-
-
-                <!-- <div class="col-md-10">
-                  <center>
-                    <div class="row heading-row1">Appointments</div><hr style="width:30%">
-                  </center>
-                  <div class="row professional-row">
-                    <% @doctor.appointments.each do |c| %>
-                    <div class="row"><div class="col-md-4" id="pro-label">Appointment Date</div><div class="col-md-8 pro-info"><%=c.appdate%></div></div>
-
-                    <div class="row"><div class="col-md-4" id="pro-label">Appointment Time:</div><div class="col-md-8 pro-info"><%=c.apptime%></div></div>
-                    <div class="row"><div class="col-md-4" id="pro-label">Appointment Time:</div><div class="col-md-8 pro-info"><% if c.patient.name%>
-                                                                                                                                  <%else%>
-                                                                                                                                  <%=c.patient.name%>
-                                                                                                                                  <%end%></div></div>
-                    <hr style="width:100%">
-                    <%end%>
-                   </div>
-                </div> -->

@@ -1,13 +1,15 @@
 <head>
-<nav class="navbar navbar-fixed-top mynav">
+<nav class="navbar navbar-fixed-top mynav" style = "background-color: #fff;border-bottom: 1px solid #E0E0E0;">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand brand-logo " href="#">WebSiteName</a>
+        <a class="navbar-brand brand-logo " href="#"><%=image_tag("logo.png", :style => "width:150px; height:50px;padding-left:2em;padding-top:-5px;")%></a>
       </div>
       <ul class="nav navbar-nav pull-right" id="nav-list">
-        <li class="active"><a href="#">Home</a></li>
-        <li><%= link_to "Services", static_pages_Services_path %></li>
-        <li><%= link_to "Sign In", static_pages_SignIn_path %></li>
+       <li><%= link_to "Home", static_pages_Home_path, :class => "babe", :style => "color:#000;" %></li>
+        <li><%= link_to "Services", static_pages_Services_path, :class => "babe", :style => "color:#000;" %></li>
+        <% if !logged_in? %>
+          <li><%= link_to "Sign In", static_pages_SignIn_path, :class => "babe", :style => "color:#000;" %></li>
+        <%end%>
       </ul>
     </div>
   </nav>

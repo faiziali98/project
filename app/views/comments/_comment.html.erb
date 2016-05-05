@@ -1,6 +1,6 @@
 <div class="comments-part">
     <br/>
-    <div class="comment-body"><span><%=link_to @patient.name.upcase%> commented:</span> <%=comment.body%></div>
+    <div class="comment-body"><span><%= image_tag @patient.image_url().to_s, :class => "comment-image"%><%=link_to @patient.name.upcase%> commented:</span> <%=comment.body%></div>
 
 
   </div>

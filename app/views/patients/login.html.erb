@@ -20,7 +20,7 @@
 <%= form_for(:patient, url: login_path) do |f| %>
     <div class="form-group">
       <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+      <%= f.text_field :email, class: 'form-control' %>
     </div>
     <div class="form-group">
       <%= f.label :password %>

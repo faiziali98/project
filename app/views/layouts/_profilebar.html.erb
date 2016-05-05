@@ -1,15 +1,15 @@
 <div class="sidebar-menu">
-  <br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/>
   <header class="logo">
-  <span id="logo"> <h3>PROFILE</h3></span>
+  <span id="logo"></span>
   <!--<img id="logo" src="" alt="Logo"/>-->
   </a>
 </header>
 <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
 <!--/down-->
       <div class="down">
-        <%= image_tag @doctor.image_url().to_s, :class => "doc-pat-img" %>
-        <p><span class=" name-caret"><b><%=@doctor.name.upcase%><b></span></p>
+        <%= image_tag @doctor.image_url().to_s, :class => "doc-pat-img"%>
+        <h4 style="padding-left:10px; color:#000; "><%= "Dr." + @doctor.name.upcase%></h4>
 
       </div>
          <!--//down-->
@@ -22,7 +22,6 @@
              <div><%=f.hidden_field :doctor_id, :value => @doctor.id %></div>
              <li><span><%= f.submit "Follow", class:"button"%></span></li>
              <%end%>
-
             <li><span><%=link_to "Back to Dashboard", {:controller=>:patients,:action=>:show,:id => params[:patid]} %></span></li>
             <li><span><%= link_to "Logout", logout_path, method: "delete"%></span></li>
           </ul>

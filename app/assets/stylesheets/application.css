@@ -16,4 +16,6 @@
  *= require font-awesome.min
  *=require jquery.mb.YTPlayer.min
  *= require bootstrap.min
+ 
+*= require video-js
  */

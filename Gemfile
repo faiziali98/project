@@ -16,6 +16,11 @@ gem 'devise'
 gem 'bcrypt'
 gem 'gmaps4rails'
 gem 'simple_form'
+gem 'rspec'
+gem "paperclip", "~> 4.2"
+gem 'launchy'
+gem 'rspec-rails'
+gem 'simplecov'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'rake','11.0.1'
@@ -27,9 +32,16 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+gem 'videojs_rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-
+group :test do
+  gem 'simplecov', require: false
+  gem 'cucumber-rails', require: false
+  gem "cucumber-websteps"
+  gem 'database_cleaner'
+  gem "selenium-webdriver"
+end
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

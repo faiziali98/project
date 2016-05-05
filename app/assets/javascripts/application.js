@@ -22,3 +22,4 @@
 //= require bootstrap
 //=require Underscore
 //=require gmaps/google
+//= require video

@@ -1,5 +1,5 @@
 <div class="sidebar-menu">
-  <br/><br/><br/>
+  <br/><br/><br/>  <br/><br/><br/><br/>
   <header class="logo">
   <span id="logo"> <h1>PROFILE</h1></span>
   <!--<img id="logo" src="" alt="Logo"/>-->
@@ -9,7 +9,7 @@
 <!--/down-->
       <div class="down">
         <%= image_tag @doctor.image_url().to_s, :class => "doc-pat-img" %>
-        <p><span class=" name-caret"><b><%=@doctor.name.upcase%><b></span></p>
+        <h4 style="padding-left:10px; color:#000; "><%= "Dr." + @doctor.name.upcase%></h4>
 
       </div>
          <!--//down-->

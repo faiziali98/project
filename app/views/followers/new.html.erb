@@ -54,17 +54,17 @@
             <div class="about-info-p">
               <strong>Speciality</strong>
               <br>
-              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.spec))%><%=@doctor.profession.spec%><%else%><%="Will be Available Soon"%><%end%></p>
+              <p class="text-muted"><% if ((@doctor) && (@doctor.profession))%><%=@doctor.profession.spec%><%else%><%="Will be Available Soon"%><%end%></p>
             </div>
             <div class="about-info-p">
               <strong>Fee</strong>
               <br>
-              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.fee))%><%=@doctor.profession.fee%><%else%><%="Will be Available Soon"%><%end%> PKR</p>
+              <p class="text-muted"><% if ((@doctor) && (@doctor.profession))%><%=@doctor.profession.fee%><%else%><%="Will be Available Soon"%><%end%> PKR</p>
             </div>
             <div class="about-info-p">
               <strong>Office Timings</strong>
               <br>
-              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.offstart) &&(@doctor.profession.offend))%><%=@doctor.profession.offstart%><%="-"%><%=@doctor.profession.offstart%>(24-hour format)<%else%><%="Will be Available Soon"%><%end%></p>
+              <p class="text-muted"><% if ((@doctor) && (@doctor.profession.offstart) &&(@doctor.profession.offend))%><%=@doctor.profession.offstart%><%="-"%><%=@doctor.profession.offend%>(24-hour format)<%else%><%="Will be Available Soon"%><%end%></p>
             </div>
             <div class="about-info-p m-b-0">
               <strong>Office Address</strong>

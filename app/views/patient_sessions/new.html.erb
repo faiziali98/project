@@ -1,6 +1,4 @@
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
- <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
- <%= csrf_meta_tags %>
+
 <!--
  <div class="row heading-row">
    <center><h1>Please SignIn</h1><hr style="width:30%;"> </center>
@@ -35,7 +33,7 @@
               <%= form_for(:patient_session, url: login_pat_path) do |f| %>
                   <div class="form-group">
                     <%= f.label :email %>
-                    <%= f.email_field :email, class: 'form-control' %>
+                    <%= f.text_field :email, class: 'form-control' %>
                   </div>
                   <div class="form-group">
                     <%= f.label :password %>

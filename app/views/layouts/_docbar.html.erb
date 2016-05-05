@@ -1,5 +1,5 @@
 <div class="sidebar-menu">
-  <br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/>
   <header class="logo">
   <span id="logo"> <h1>HeyDoc</h1></span>
   <!--<img id="logo" src="" alt="Logo"/>-->
@@ -8,9 +8,9 @@
 <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
 <!--/down-->
       <div class="down">
-            <!-- <%= image_tag("mypic.jpg", :alt => "rss feed",:class => "doc-pat-img") %> -->
-            <%= image_tag @doctor.image_url().to_s, :class => "doc-pat-img" %>
-            <p><span class=" name-caret"><b><%=@doctor.name.upcase%><b></span></p>
+            
+            <%= image_tag @doctor.image_url().to_s, :class => "doc-pat-img",:style =>"margin-top:-2.5em" %>
+            <h4 style="padding-left:10px; color:#000; "><%= "Dr." + @doctor.name.upcase%></h4>
 
       </div>
          <!--//down-->
@@ -20,6 +20,7 @@
             <li><span><%= link_to "Appointments",:controller => :appointments ,:action => :show ,:id => @doctor.id%></span></li>
             <li><span><%= link_to "See Professional Info",:controller => :professions ,:action => :show ,:id => @doctor.id %></span></li>
             <li><span><%= link_to "See your Qualification",:controller => :degrees ,:action => :show ,:id => @doctor.id %></span></li>
+            <li><span><%= link_to "See your Ratings", :controller => "reviews", :action => "show1",:did => @doctor.id %></span></li>
             <li><span><%= link_to "Logout", logout_path, method: "delete"%></span></li>
 
           </ul>

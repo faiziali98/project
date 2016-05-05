@@ -1,91 +1,30 @@
+<br/><br/><br/><br/><br/><br/>
+<%= render 'layouts/patbar'%>
 <div class="container">
-<div class="row cover-row">
-  <div class="col-md-2 userpic">
-    <img class="img-responsive patient-img" src="assets/images/mypic.jpg">
-  </div>
-  <br/><br/><br/><br/><br/><br/><br/>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-        24
-    </div>
-      <div class="user-headings">
-        Appointments
-      </div>
-  </div>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-      9
-    </div>
-
-    <div class="user-headings">
-      Starred
-    </div>
-
-  </div>
-  <div class="col-md-3 user-blocks">
-    <div class="Number">
-      5
-    </div>
-
-    <div class="user-headings">
-      Reviews
-    </div>
-
-  </div>
-  </div>
-</div>
-  <br/><br/><br/>
-<!--FIX THIS SHIT-->
-<div class="container">
-              <div class="row">
-                <div class="col-md-2 menu">
-                  <div class="menu-item">
-                    <a class="item">Reviews</a>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-
-                      <a class="item">Appointments</a>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-                      <a class="item">Starred Doc</a>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="menu-item">
-                      <a class="item">Logout</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-10 edit-form">
-                  <center>
-                  <div class="form-group">
-                  <%= form_for (@reviews) do |f| %>
-                    <%= f.label :waitTime, id:"label1"%>
-                      <%= f.text_field :waitTime,class: 'form-control' %>
-                    </div>
-                    <div class="form-group">
-                        <%= f.label :besideManner,id:"label1" %>
-                          <%= f.text_field :besideManner,class: 'form-control'  %>
-                      </div>
-                    <div class="form-group">
-                        <%= f.label :overallRating,id:"label1" %>
-                        <%= f.text_field :overallRating,class: 'form-control'  %>
-                        <%= f.hidden_field :patient_id, :value => params[:patid]%>
-                        <%= f.hidden_field :doctor_id, :value => params[:docid]%>
-                      </div>
-                      <div class="form-group">
-                          <%= f.label :description,id:"label1" %>
-                          <%= f.text_field :description,class: 'form-control'  %>
-                      </div>
-                            <div class="form-group">
-                            <%= f.submit "Submit Review", class: "btn btn-edit" %>
-                        </div>
-                      <%end %>
-                      <center>
-                    </div><!-- /.contact-form -->
-
-                    </div>
-                </div>
+  <div class="profile-section-inner">
+      <div class="col-md-6 col-md-push-3 profile-info">
+     <h3 class="inner-tittle" style="color:#021F4E"><strong>Please Fill in the Form </strong> </h3>
+      <%= form_for (@reviews) do |f| %>
+      <div class="form-group">
+        <%= f.label :waitTime, id:"label1"%>
+          <%= f.text_field :waitTime,class: 'form-control' %>
+        </div>
+        <div class="form-group">
+            <%= f.label :besideManner,id:"label1" %>
+              <%= f.text_field :besideManner,class: 'form-control'  %>
+          </div>
+        <div class="form-group">
+            <%= f.label :overallRating,id:"label1" %>
+            <%= f.text_field :overallRating,class: 'form-control'  %>
+            <%= f.hidden_field :patient_id, :value => params[:patid]%>
+            <%= f.hidden_field :doctor_id, :value => params[:docid]%>
+          </div>
+          <div class="form-group">
+              <%= f.label :description,id:"label1" %>
+              <%= f.text_field :description,class: 'form-control'  %>
+          </div>
+                <div class="form-group">
+                <%= f.submit "Submit Review", class: "btn btn-edit" %>
+            </div>
+          <%end %>
+      
