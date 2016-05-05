@@ -17,9 +17,9 @@
 //= require_tree .
 //= bootstrap.min
 //= heydoc
-//=css3clock
+//= css3clock
 //= require jquery.vide
 //= require bootstrap
-//=require Underscore
-//=require gmaps/google
+//= require Underscore
+//= require gmaps/google
 //= require video
